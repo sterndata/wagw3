@@ -30,6 +30,9 @@ ul, ol {
    font-size: 1em;
    margin-top: 1em;
 }
+.page-id-5 .entry-title {
+   display: none;
+}
 .entry-content h2 {
    clear: none;
    padding-top: .25em;
