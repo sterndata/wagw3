@@ -112,3 +112,20 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
 .home .wp-video {
   margin: 0 auto;
 }
+
+#slider {
+   margin: 1em -90%;
+   margin: 1em calc(45% - 45vw);
+}
+.flex-caption {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    color: #7f3e98;
+    display: block;
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+    text-align: center;
+}
