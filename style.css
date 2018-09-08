@@ -92,6 +92,9 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
         }
 }
 
+.main-navigation {
+   text-transform: lowercase;
+}
 @media screen and (min-width: 48em) {
    .social-navigation {
       float:right;
