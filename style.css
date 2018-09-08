@@ -106,3 +106,6 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   font-size:initial;
   line-height:initial;
 }
+.home .wp-video {
+  margin: 0 auto;
+}
