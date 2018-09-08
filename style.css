@@ -1,0 +1,108 @@
+/*
+ Theme Name:   wagw_2017 
+ Theme URI:    http://www.sterndata.com
+ Description:  Twenty Seventeen Child Theme
+ Author:       Steven Stern
+ Author URI:   http://www.sterndata.com
+ Template:     twentyseventeen
+ Version:      1.0.3
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  twentyseventeen
+*/
+
+body.has-header-image .site-description {
+  opacity: 1;
+  font-size: 150%;
+}
+
+h1, h2, h3, h4, h5, h6, p.site-title {
+   font-family: Bitter, sans-serif;
+}
+ul, ol {
+   margin-left: 2em;
+}
+
+.post-419 .entry-title:first-of-type {
+   display:none;
+}
+.home .entry-title {
+   font-size: 1em;
+   margin-top: 1em;
+}
+.entry-content h2 {
+   clear: none;
+   padding-top: .25em;
+}
+body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a, body.has-header-image .site-description, body.has-header-video .site-description {
+  text-shadow: 1px 1px 1px #000;
+}
+
+.page-one-column .panel-content .wrap {
+   padding-top: .5em;
+}
+.wp-caption .wp-caption-text {
+   text-align: center;
+}
+@media screen and (min-width: 30em) {
+   .page-one-column .panel-content .wrap {
+      max-width: 960px; /* was 740 */
+   }
+}
+@media screen and (min-width: 48em) {
+  
+  .page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header {
+    margin-bottom: 1em;
+  }
+}
+
+.single-featured-image-header {
+   display:none;
+}
+
+#black-studio-tinymce-5 img {
+   margin: 4px;
+}
+.sds_column.half {
+   column-count: 2;
+   column-gap: 50px;
+}
+.sds_column.half p:first-of-type {
+   display: none;
+}
+#content div.sharedaddy, #main div.sharedaddy, div.sharedaddy {
+   margin-top: 2em;
+}
+@media screen and (min-width: 48em) {
+.twentyseventeen-front-page.has-header-image .custom-header-media,
+        .twentyseventeen-front-page.has-header-video .custom-header-media,
+        .home.blog.has-header-image .custom-header-media,
+        .home.blog.has-header-video .custom-header-media {
+                height: 600px;
+                height: 80vh;
+                max-height: 600px;
+                overflow: hidden;
+        }
+        .panel-image {
+                height: 80vh;
+                max-height: 600px;
+        }
+}
+
+@media screen and (min-width: 48em) {
+   .social-navigation {
+      float:right;
+   }
+   
+   .social-navigation ul {
+      float:right;
+   }
+}
+
+.widget_rss ul li {
+   padding: 4px;
+}
+.widget_rss li .rsswidget {
+  font-size:initial;
+  line-height:initial;
+}
