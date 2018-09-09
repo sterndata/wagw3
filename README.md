@@ -1,8 +1,7 @@
-# sds_2017
-Child of twentyseventeen for www.sterndata.com
+# WAGW3
+Child of twentyseventeen for whatagreatwebsite.net
 
-The basic reason for creating this is to have a smaller image at the top of the home page...
-2000x600 instead of 2000x1200
-
-As long as we're here:
-   use different Google fonts
+Big diffs:
+  * menu color
+  * 2000x600 insteat of 2000x1200 for hero image
+  * flexslider via ACF
