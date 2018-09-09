@@ -53,10 +53,16 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
     max-height: initial;
     width: auto;
 }
-span.nav-image {
+.navigation-top .nav-image {
     float: left;
+    display: none;
 }
-span.nav-image img.custom-logo {
+.navigation-top.site-navigation-fixed  .nav-image {
+    float: left;
+    display: inline-block; 
+}
+
+.nav-image img.custom-logo {
     max-height: 75px;
     position: relative;
     margin-bottom: -41px;
