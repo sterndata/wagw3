@@ -155,5 +155,20 @@ nav#site-navigation, .main-navigation ul ul a {
    }
    .main-navigation ul ul {
       background: linear-gradient(180deg,rgba(243,115,33,1),rgba(243,115,33,.9));
-
+   }
+   .wagw_col{
+      width:33%;
+    }
+   .wagw_col_left{
+     float:left;
+     padding-right:.5em;
+   }
+   .wagw_col_center{
+     float:left;
+     padding-left:.5em;
+     padding-right:.5em;
+   }
+   .wagw_col_right{
+     float:right;
+   }
 }
