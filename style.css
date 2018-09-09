@@ -47,6 +47,28 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
 .wp-caption .wp-caption-text {
    text-align: center;
 }
+
+.custom-logo-link img {
+    display: inline-block;
+    max-height: initial;
+    width: auto;
+}
+span.nav-image {
+    float: left;
+}
+span.nav-image img.custom-logo {
+    max-height: 75px;
+    position: relative;
+    margin-bottom: -41px;
+    margin-top: -20px;
+}
+span.nav-image img.custom-logo {
+    max-height: 75px;
+    position: relative;
+    margin-bottom: -41px;
+    margin-top: -20px;
+}
+
 @media screen and (min-width: 30em) {
    .page-one-column .panel-content .wrap {
       max-width: 960px; /* was 740 */

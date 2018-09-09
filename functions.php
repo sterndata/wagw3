@@ -80,9 +80,9 @@ function wagw_flexslider_gallery_scripts() {
 add_action( 'wp_enqueue_scripts', 'wagw_flexslider_gallery_scripts' );
 
 function shortcode_wagw_cols( $atts, $content ) {
-/*
- * left, right, and center are for divs on three column pages
- */
+	/*
+	* left, right, and center are for divs on three column pages
+	*/
 
 	//move wpautop filter to AFTER shortcode is processed
 	remove_filter( 'the_content', 'wpautop' );
@@ -91,10 +91,24 @@ function shortcode_wagw_cols( $atts, $content ) {
 	$a = shortcode_atts( array(
 		'type' => 'center',
 	), $atts );
-	return '<div class="wagw_col wagw_col_'.sanitize_text_field( $a['type'] ).'">'.$content.'</div>';
+	return '<div class="wagw_col wagw_col_' . sanitize_text_field( $a['type'] ) . '">' . $content . '</div>';
 }
 add_shortcode( 'wagw_col','shortcode_wagw_cols' );
-function wagw_clear () {
-  return '<div style="clear: both;"></div>';
+function wagw_clear() {
+	return '<div style="clear: both;"></div>';
 }
-add_shortcode( 'clear', 'wagw_clear');
+add_shortcode( 'clear', 'wagw_clear' );
+
+add_filter( 'wp_nav_menu_items', 'wpsites_add_logo_nav_menu', 10, 2 );
+
+function wpsites_add_logo_nav_menu( $menu, stdClass $args ) {
+
+	if ( 'top' != $args->theme_location ) {
+		return $menu;
+	}
+
+	$menu .= '<span class="nav-image">' . get_custom_logo() . '</span>';
+
+	return $menu;
+
+}
