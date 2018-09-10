@@ -53,12 +53,19 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
     max-height: initial;
     width: auto;
 }
+
 .navigation-top .nav-image {
-    float: right;
+    display:none;
+}
+
+@media screen and (min-width: 31em) {
+.navigation-top .nav-image {
+    float: left;
+    display:inline-block;
     opacity: 0;
 }
 .navigation-top.site-navigation-fixed  .nav-image {
-    float: right;
+    float: left;
     opacity:1;
 }
 
@@ -78,7 +85,7 @@ span.nav-image img.custom-logo {
     margin-top: -20px;
 }
 
-@media screen and (min-width: 30em) {
+
    .page-one-column .panel-content .wrap {
       max-width: 960px; /* was 740 */
    }
