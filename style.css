@@ -54,14 +54,17 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
     width: auto;
 }
 .navigation-top .nav-image {
-    float: left;
-    display: none;
+    float: right;
+    opacity: 0;
 }
 .navigation-top.site-navigation-fixed  .nav-image {
-    float: left;
-    display: inline-block; 
+    float: right;
+    opacity:1;
 }
 
+.nav-image {
+    transition: opacity .5s;
+}
 .nav-image img.custom-logo {
     max-height: 75px;
     position: relative;
