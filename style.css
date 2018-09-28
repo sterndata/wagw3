@@ -97,18 +97,13 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   }
 
   .nav-image img.custom-logo {
-    max-height: 75px;
+    max-height: 109px;
     position: relative;
     margin-bottom: -41px;
     margin-top: -20px;
+    margin-left:-75px;
   }
 
-  span.nav-image img.custom-logo {
-    max-height: 75px;
-    position: relative;
-    margin-bottom: -41px;
-    margin-top: -20px;
-  }
 
   .page-one-column .panel-content .wrap {
     max-width: 960px;
