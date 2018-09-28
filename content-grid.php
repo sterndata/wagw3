@@ -22,7 +22,6 @@
 <div id="grid" class="grid">
 
 <?php
-$carousel = ''; // in case there's a carousel
 while ( have_rows( 'slides' ) ) { the_row();
 	$image = get_sub_field( 'slide_image' );
 	$slide_title = get_sub_field( 'slide_title' );
@@ -49,16 +48,9 @@ while ( have_rows( 'slides' ) ) { the_row();
 	<?php if ( $slide_title ) { ?> <span class="caption_title"><?php echo $slide_title; }?>
 	<?php if ( $slide_caption ) { ?></span><?php echo $slide_caption; } ?></div>
 	<?php } // captions ?>
-		</li>
-	<?php
-	/* if a carousel is set, build  the carousel here and display later */
-	if ( get_field( 'slider_carousel' ) ) {
-		$carousel .= '<li><img src="' . $image['url'] . '" ' . $src_set . "/></div><!-- box -->\n";
-	}
-	?>
+		</div><!-- box -->
 	<?php } // while have rows ?>
 </div><!-- grid -->
-</div>
 <?php
 	} // images
 
