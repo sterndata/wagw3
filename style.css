@@ -30,17 +30,16 @@ ul, ol {
   margin-left: 2em;
 }
 
-.post-419 .entry-title:first-of-type {
-  display: none;
+.post-5 .entry-title {
+   display: none;
 }
 
 .home .entry-title {
   font-size: 1em;
   margin-top: 1em;
 }
-
-.page-id-5 .entry-title {
-  display: none;
+.page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title {
+    font-size: 20px;
 }
 
 .entry-content h2 {
