@@ -248,7 +248,7 @@ nav#site-navigation, .main-navigation ul ul a {
 /* portfolio page */
 div.grid {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 33% 33% 33%;
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
@@ -256,9 +256,9 @@ div.grid {
 }
 
 div.box {
-  background-color: #444;
+  background-color: #ccc;
   color: #fff;
   border-radius: 5px;
-  padding: 20px;
   font-size: 150%;
+  display:contents;
 }
