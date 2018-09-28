@@ -108,6 +108,7 @@ function wpsites_add_logo_nav_menu( $menu, stdClass $args ) {
 	}
 
 	$menu .= '<span class="nav-image">' . get_custom_logo() . '</span>';
+        $menu .= '<span class="tagline">' . get_bloginfo('description') . '</span>';
 
 	return $menu;
 }

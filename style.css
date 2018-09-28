@@ -68,7 +68,10 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
 .navigation-top .nav-image {
   display: none;
 }
-
+.navigation-top span.tagline {
+  display: none;
+  opacity: 0;
+} 
 @media screen and (min-width: 31em) {
   .navigation-top .nav-image {
     float: left;
@@ -80,8 +83,16 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
     float: left;
     opacity: 1;
   }
-
-  .nav-image {
+  .navigation-top.site-navigation-fixed span.tagline {
+    display:inline-block;
+    float: right;
+    right: 3%;
+    position: relative;
+    color: #fff;
+    font-size: 200%;
+    opacity:1;
+   }
+  .nav-image, span.tagline {
     transition: opacity .5s;
   }
 
