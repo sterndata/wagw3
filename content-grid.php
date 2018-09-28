@@ -19,8 +19,8 @@
 		if ( function_exists( 'wp_get_attachment_image_srcset' ) ) { $use_srcset = true; }
 		/// ?>
 
-<div id="slider" class="flexslider slider-save-space">
-<ul class="slides">
+<div id="grid" class="grid">
+
 <?php
 $carousel = ''; // in case there's a carousel
 while ( have_rows( 'slides' ) ) { the_row();
@@ -43,7 +43,7 @@ while ( have_rows( 'slides' ) ) { the_row();
 		$src_set = '';
 	}
 ?>
-<li><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /><?php if ( $slide_target ) { echo '</a>'; } ?>
+<div class="box"><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /><?php if ( $slide_target ) { echo '</a>'; } ?>
 	<?php if ( get_field( 'show_image_captions' ) ) { ?>
 		<div class="flex-caption">
 	<?php if ( $slide_title ) { ?> <span class="caption_title"><?php echo $slide_title; }?>
@@ -53,23 +53,16 @@ while ( have_rows( 'slides' ) ) { the_row();
 	<?php
 	/* if a carousel is set, build  the carousel here and display later */
 	if ( get_field( 'slider_carousel' ) ) {
-		$carousel .= '<li><img src="' . $image['url'] . '" ' . $src_set . "/></li>\n";
+		$carousel .= '<li><img src="' . $image['url'] . '" ' . $src_set . "/></div><!-- box -->\n";
 	}
 	?>
 	<?php } // while have rows ?>
-</ul>
+</div><!-- grid -->
 </div>
-<?php if ( get_field( 'slider_carousel' ) ) { ?>
-<div id="carousel" class="flexslider">
-	<ul class="slides">
-		<?php echo $carousel; ?>
-	</ul>
-</div>
-
-<?php	} // carousel
+<?php
 	} // images
 
-		?>
+?>
 <?php } ?>
 	<div class="entry-content">
 		<?php the_content(); ?>

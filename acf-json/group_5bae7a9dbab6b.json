@@ -128,7 +128,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "slider-page.php"
+                "value": "grid-page.php"
             }
         ]
     ],
@@ -142,5 +142,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538161347
+    "modified": 1538161444
 }
