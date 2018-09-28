@@ -157,6 +157,13 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   .site-content {
       padding: 1em  0 5.5em 0;
   }
+  .site-content-contain {
+     padding-top: 110px;
+  }
+  .home .site-content-contain {
+     padding-top: 0;
+  }
+
 }
 
 nav#site-navigation, .main-navigation ul ul a {
