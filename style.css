@@ -189,6 +189,33 @@ nav#site-navigation, .main-navigation ul ul a {
   border-top: initial;
 }
 
+/* classes for grip-page.php template */
+div.grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  margin-bottom: 1.5em;
+}
+
+div.box {
+  background-color: #ccc;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 150%;
+  display: contents;
+}
+
+/**** end grid *******/
+/* anchor offset for fixed-height header */
+div.sds-anchor {
+  display: block;
+  position: relative;
+  top: -110px;
+  visibility: hidden;
+}
+
 @media screen and (min-width: 48em) {
   .navigation-top {
     background-color: linear-gradient(180deg, rgba(243, 115, 33, 1), rgba(243, 115, 33, .9));
@@ -235,36 +262,7 @@ nav#site-navigation, .main-navigation ul ul a {
   .wagw_col_right {
     float: right;
   }
-}
 
-/* classes for grip-page.php template */
-div.grid {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-gap: 10px;
-  background-color: #fff;
-  color: #444;
-  margin-bottom: 1.5em;
-}
-
-div.box {
-  background-color: #ccc;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 150%;
-  display: contents;
-}
-
-/**** end grid *******/
-/* anchor offset for fixed-height header */
-div.sds-anchor {
-  display: block;
-  position: relative;
-  top: -110px;
-  visibility: hidden;
-}
-
-@media screen and (min-width: 31em) {
   .navigation-top .nav-image {
     float: left;
     display: inline-block;
