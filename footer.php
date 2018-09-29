@@ -12,6 +12,19 @@
  * @version 1.2
  */
 
+/*
+ * inserts jetpack share icons if enabled for this page type in
+ * the sharing settings. Placment via the_content filter disabled in
+ * functions.php
+ */
+if ( function_exists( 'sharing_display' ) ) {
+		sharing_display( '', true );
+}
+
+if ( class_exists( 'Jetpack_Likes' ) ) {
+		$custom_likes = new Jetpack_Likes;
+		echo $custom_likes->post_likes( '' );
+}
 ?>
 
 		</div><!-- #content -->
@@ -39,7 +52,7 @@
 				<?php
 				endif;
 
-//				get_template_part( 'template-parts/footer/site', 'info' );
+				get_template_part( 'template-parts/footer/site', 'info' );
 				?>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
