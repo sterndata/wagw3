@@ -29,7 +29,14 @@ h1, h2, h3, h4, h5, h6, p.site-title {
 ul, ol {
   margin-left: 2em;
 }
-
+.entry-content a {
+   font-weight:bold;
+   box-shadow:initial;
+} 
+a, a:visited {
+    color: #75439a;
+    text-decoration: none;
+}
 .post-5 .entry-title {
    display: none;
 }
@@ -48,6 +55,7 @@ ul, ol {
     font-size: 28px;
     color: #75439a;
     letter-spacing: 2px;
+    text-transform:lowercase;
 }
 
 .entry-content h2 {
@@ -276,7 +284,7 @@ nav#site-navigation, .main-navigation ul ul a {
   }
 }
 
-/* portfolio page */
+/* classes for grip-page.php template */
 div.grid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -293,7 +301,9 @@ div.box {
   font-size: 150%;
   display:contents;
 }
+/**** end grid *******/
 
+/* anchor offset for fixed-height header */
 div.sds-anchor {
    display: block;
    position:relative;
