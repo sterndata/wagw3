@@ -216,6 +216,25 @@ div.sds-anchor {
   visibility: hidden;
 }
 
+/* menu toggle */
+
+button.menu-toggle {
+   width: 100%;
+}
+
+button.menu-toggle:before {
+   content: "";
+   background-image:url('http://wagw3.sterndata.com/wp-content/uploads/cropped-WAWG-Logo.png');
+   background-repeat:no-repeat;
+   display:block;
+   height: 100px;
+   background-size: contain;
+}
+
+.home .menu-toggle:before {
+   content:none;
+}
+
 @media screen and (min-width: 48em) {
   .navigation-top {
     background-color: linear-gradient(180deg, rgba(243, 115, 33, 1), rgba(243, 115, 33, .9));
