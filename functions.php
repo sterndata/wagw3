@@ -49,29 +49,32 @@ function wagw_flexslider_gallery_scripts() {
 		wp_register_script( 'flexslider', get_stylesheet_directory_uri() . '/flexslider/jquery.flexslider-min.js', array( 'jquery' ), false, false );
 		wp_register_script( 'load_flex', get_stylesheet_directory_uri() . '/js/load-flex.js', array( 'jquery', 'flexslider' ), false, false );
 
-		$speed = get_field( 'slideshow_speed' );
-		$animation = get_field( 'animation_speed' );
+		$speed          = get_field( 'slideshow_speed' );
+		$animation      = get_field( 'animation_speed' );
 		$animation_type = get_field( 'animation_type' );
-		$easing = get_field( 'easing_method' );
-		$controlNav = $directionNav = false;
-		if ( get_field( 'nextprev_arrows' ) ) { $directionNav = true;
+		$easing         = get_field( 'easing_method' );
+		$controlNav     = $directionNav = false;
+		if ( get_field( 'nextprev_arrows' ) ) {
+			$directionNav = true;
 		}
-		if ( get_field( 'navigation_dots' ) ) { $controlNav = true;
+		if ( get_field( 'navigation_dots' ) ) {
+			$controlNav = true;
 		}
-		if ( get_field( 'slider_carousel' ) ) { $controlNav = 'thumbnails';
+		if ( get_field( 'slider_carousel' ) ) {
+			$controlNav = 'thumbnails';
 		}
 
 		// get the settings for this post
 
 		$args = array(
-		'animation'       => $animation_type,
-		'animationSpeed'  => $animation,
-		'slideshowSpeed'  => $speed,
-		'controlNav'      => $controlNav,
-		'directionNav'    => $directionNav,
-		'easing'          => $easing,
+			'animation'      => $animation_type,
+			'animationSpeed' => $animation,
+			'slideshowSpeed' => $speed,
+			'controlNav'     => $controlNav,
+			'directionNav'   => $directionNav,
+			'easing'         => $easing,
 
-		 );
+		);
 		wp_enqueue_script( 'flexslider' );
 		wp_localize_script( 'load_flex', 'wagw', $args );
 		wp_enqueue_script( 'load_flex' );
@@ -86,14 +89,17 @@ function shortcode_wagw_cols( $atts, $content ) {
 
 	//move wpautop filter to AFTER shortcode is processed
 	remove_filter( 'the_content', 'wpautop' );
-	add_filter( 'the_content', 'wpautop' , 99 );
+	add_filter( 'the_content', 'wpautop', 99 );
 	add_filter( 'the_content', 'shortcode_unautop', 100 );
-	$a = shortcode_atts( array(
-		'type' => 'center',
-	), $atts );
+	$a = shortcode_atts(
+		array(
+			'type' => 'center',
+		),
+		$atts
+	);
 	return '<div class="wagw_col wagw_col_' . sanitize_text_field( $a['type'] ) . '">' . $content . '</div>';
 }
-add_shortcode( 'wagw_col','shortcode_wagw_cols' );
+add_shortcode( 'wagw_col', 'shortcode_wagw_cols' );
 function wagw_clear() {
 	return '<div style="clear: both;"></div>';
 }
@@ -107,8 +113,8 @@ function wpsites_add_logo_nav_menu( $menu, stdClass $args ) {
 		return $menu;
 	}
 
-	$menu = '<span class="nav-image">' . get_custom_logo() . '</span>' . $menu;
-        $menu .= '<span class="tagline">' . get_bloginfo('description') . '</span>';
+	$menu      = '<span class="nav-image">' . get_custom_logo() . '</span>' . $menu;
+		$menu .= '<span class="tagline">' . get_bloginfo( 'description' ) . '</span>';
 
 	return $menu;
 }
