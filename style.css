@@ -96,7 +96,6 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   border-top: initial;
   background-color: #98ca49;
   color: #fff;
-  font-size: 90%;
 }
 .site-footer a, .site-footer a:visited {
   color: #fff;
@@ -175,6 +174,18 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   margin-top: 2em;
 }
 
+.site-footer .wrap {
+  padding-top:0;
+  padding-bottom: 0;
+}
+.site-footer .widget-area {
+  padding-bottom: 0;
+}
+
+.widget a img {
+ box-shadow: none;
+}
+
 @media screen and (min-width: 48em) {
 
   .twentyseventeen-front-page.has-header-image .custom-header-media,
@@ -205,6 +216,12 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 3em;
+  }
+  .site-footer {
+    margin-top:0;
+  }
+  .site-footer .widget-column.footer-widget-1, .site-footer .widget-column.footer-widget-2  {
+    width: 50%;
   }
 
 }
