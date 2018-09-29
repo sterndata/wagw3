@@ -151,6 +151,12 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   .page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header {
     margin-bottom: 1em;
   }
+  .has-sidebar #secondary {
+     width: 20%;
+  }
+  .has-sidebar:not(.error404) #primary {
+     width: 75%;
+  }
 }
 
 .single-featured-image-header {
