@@ -269,15 +269,20 @@ div.sds-anchor {
     opacity: 0;
   }
 
+  .main-navigation a{
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+
   .navigation-top.site-navigation-fixed .nav-image {
     float: left;
     opacity: 1;
   }
 
   .navigation-top.site-navigation-fixed span.tagline {
-    display: inline-block;
-    float: right;
-    right: 3%;
+    display: block;
+    text-align: right;
+    right: 12%;
     position: relative;
     color: #fff;
     font-size: 200%;
