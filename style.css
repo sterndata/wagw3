@@ -44,9 +44,10 @@ ul, ol {
   padding-top: 0;
 }
 
-.page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title {
-    font-size: 20px;
+.page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title, .entry-content h1 {
+    font-size: 28px;
     color: #75439a;
+    letter-spacing: 2px;
 }
 
 .entry-content h2 {
@@ -247,7 +248,8 @@ nav#site-navigation, .main-navigation ul ul a {
   }
 
   .navigation-top .current-menu-item>a, .navigation-top .current_page_item>a {
-    color: #eee;
+    color: #fff;
+    border-bottom: 1px solid #fff;
   }
 
   .main-navigation ul ul {
