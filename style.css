@@ -41,14 +41,18 @@ ul, ol {
 .home .entry-title {
   font-size: 1em;
   margin-top: 1em;
+  color: #75439a;
 }
 .page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title {
     font-size: 20px;
+    color: #75439a;
 }
 
 .entry-content h2 {
   clear: none;
   padding-top: .25em;
+  color: #98ca49;
+  font-weight:bold;
 }
 
 body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a, body.has-header-image .site-description, body.has-header-video .site-description {
@@ -230,8 +234,11 @@ nav#site-navigation, .main-navigation ul ul a {
     top: 0.7em;
   }
 
-  .navigation-top a {
+  .navigation-top a, .navigation-top a:hover {
     color: #fff;
+  }
+  #top-menu li.menu-item:hover {
+    background-color: #98CA49;
   }
 
   .navigation-top .current-menu-item>a, .navigation-top .current_page_item>a {
