@@ -286,3 +286,10 @@ div.box {
   font-size: 150%;
   display:contents;
 }
+
+div.sds-anchor {
+   display: block;
+   position:relative;
+   top: -110px;
+   visibility:hidden;
+}
