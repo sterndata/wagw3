@@ -39,6 +39,11 @@ ul, ol {
   margin-top: 1em;
   color: #75439a;
 }
+
+.entry-content h1 {
+  padding-top: 0;
+}
+
 .page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title {
     font-size: 20px;
     color: #75439a;
