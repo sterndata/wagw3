@@ -185,6 +185,12 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   .home .site-content-contain {
      padding-top: 0;
   }
+  
+  .sharedaddy.sd-sharing-enabled {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 3em;
+  }
 
 }
 
