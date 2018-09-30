@@ -29,6 +29,14 @@ body.has-header-image .site-description {
   box-shadow: none;
 }
 
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Raleway, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6, p.site-title {
   font-family: Raleway, sans-serif;
 }

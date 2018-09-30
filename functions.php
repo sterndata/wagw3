@@ -4,8 +4,13 @@ function wagw_2017_enqueue_styles() {
 
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'wagw_2017_google_fonts', 'https://fonts.googleapis.com/css?family=Raleway' );
-
 }
+
+add_action( 'wp_print_styles', 'wagw_remove_styles', 100 );
+function wagw_remove_styles() {
+	wp_dequeue_style( 'twentyseventeen-fonts' );
+}
+
 /**
  * change the recommended header image size to 600px high
 **/
