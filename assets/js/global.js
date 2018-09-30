@@ -74,7 +74,8 @@
 				if ( $( window ).scrollTop() >= headerOffset ) {
 					$navigation.addClass( navigationFixedClass );
 				} else {
-					$navigation.removeClass( navigationFixedClass );
+					if ( isFrontPage) { $navigation.removeClass( navigationFixedClass ); }
+					// test for frontpage added SDS
 				}
 
 			} else {
