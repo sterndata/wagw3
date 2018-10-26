@@ -30,7 +30,7 @@ function wagw_2017_overide_featured_image() {
 add_action( 'after_setup_theme', 'wagw_2017_overide_featured_image', 11 );
 
 /* override the content width */
-$content_width = 1000;
+$content_width = 1200;
 add_filter( 'jetpack_content_width', 'set_jp_cw' );
 function set_jp_cw( $width ) {
 	if ( ! $width ) {

@@ -13,7 +13,7 @@
 .single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary {
   margin-left: auto;
   margin-right: auto;
-  max-width: 960px;
+  max-width: 1200px;
 }
 
 body.has-header-image .site-description {
@@ -329,7 +329,7 @@ button.menu-toggle:before {
   }
 
   .page-one-column .panel-content .wrap {
-    max-width: 960px;
+    max-width: 1200px;
     /* was 740 */
   }
 
