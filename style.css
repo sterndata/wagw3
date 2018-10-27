@@ -243,6 +243,11 @@ button.menu-toggle:before {
    content:none;
 }
 
+.site-content {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 @media screen and (min-width: 48em) {
   .navigation-top {
     background-color: linear-gradient(180deg, rgba(243, 115, 33, 1), rgba(243, 115, 33, .9));
@@ -361,7 +366,7 @@ button.menu-toggle:before {
   }
 
   .site-content {
-    padding: 1em 0 5.5em 0;
+    padding: 1em;
   }
 
   .site-content-contain {
