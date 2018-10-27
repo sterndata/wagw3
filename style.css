@@ -326,11 +326,11 @@ button.menu-toggle:before {
     max-height: 109px;
     position: relative;
     margin-bottom: -41px;
-    margin-top: -20px;
-    margin-left: -52px;
+    margin-top: -9px;
+    margin-left: -20px;
   }
 
-  .page-one-column .panel-content .wrap, .wrap {
+  .page-one-column .panel-content .wrap, .navigation-top .wrap, .wrap {
     max-width: 1200px;
     /* was 740 */
   }
