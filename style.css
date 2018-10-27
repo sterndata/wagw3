@@ -333,7 +333,7 @@ button.menu-toggle:before {
     margin-left: -52px;
   }
 
-  .page-one-column .panel-content .wrap {
+  .page-one-column .panel-content .wrap, .wrap {
     max-width: 1200px;
     /* was 740 */
   }
