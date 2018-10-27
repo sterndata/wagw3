@@ -31,7 +31,7 @@ while ( have_rows( 'slides' ) ) { the_row();
 		$href = '<a href="' . $slide_target . '"';
 		if ( get_sub_field( 'new_window' ) ) {
 			if ( ! wp_is_mobile() ) {
-				$href .= ' target=_blank';
+				$href .= ' target=_blank ';
 			}
 		}
 		$href .= '>';
