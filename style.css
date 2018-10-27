@@ -195,6 +195,7 @@ nav#site-navigation, .main-navigation ul ul a {
 
 .navigation-top {
   border-top: initial;
+  background: linear-gradient(rgb(243, 115, 33), rgba(243, 115, 33, 0.9));
 }
 
 /* classes for grip-page.php template */
@@ -249,10 +250,6 @@ button.menu-toggle:before {
 }
 
 @media screen and (min-width: 48em) {
-  .navigation-top {
-    background-color: linear-gradient(180deg, rgba(243, 115, 33, 1), rgba(243, 115, 33, .9));
-    background: linear-gradient(180deg, rgba(243, 115, 33, 1), rgba(243, 115, 33, .9));
-  }
 
   .site-header .navigation-top .menu-scroll-down {
     color: #fff;
