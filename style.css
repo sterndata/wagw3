@@ -216,6 +216,16 @@ div.box {
   display: contents;
 }
 
+.box .slide_caption {
+  display:none;
+}
+.box:hover .slide_caption {
+ display:block;
+ text-align:center;
+ margin-top:-50%;
+}
+
+
 /**** end grid *******/
 /* anchor offset for fixed-height header */
 div.sds-anchor {
