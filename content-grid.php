@@ -25,6 +25,7 @@
 while ( have_rows( 'slides' ) ) { the_row();
 	$image = get_sub_field( 'slide_image' );
 	$slide_caption = get_sub_field( 'slide_caption' );
+	$slide_tag = get_sub_field( 'slide_tag' );
 	$slide_target = get_sub_field( 'slide_target' );
 	if ( $slide_target ) {
 		$href = '<a href="' . $slide_target . '"';
@@ -45,7 +46,7 @@ while ( have_rows( 'slides' ) ) { the_row();
 	<?php 
 	if ( get_field( 'show_image_captions' ) ) { 
 		if ( $slide_caption ) { 
-			echo '<span class="slide_caption_wrapper"><span class="slide_caption">'. $slide_caption . '</span></span>'; 
+			echo '<span class="slide_caption_wrapper"><span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span></span>'; 
 		} 
 	} // captions ?>
 <?php if ( $slide_target ) { echo '</a>'; } ?>

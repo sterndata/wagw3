@@ -223,12 +223,18 @@ div.grid {
    background-color: #ccc;
    color: #fff;
    border-radius: 5px;
-   font-size: 150%;
+   font-size: 125%;
+   font-weight:bold;
    display: block;
    overflow: hidden;
    position:relative;
    background: transparent;
  }
+
+ .box .slide_tag {
+   font-style: italic;
+   font-size: 85%;
+  }
 
  .box .slide_caption_wrapper {
    display:none;
