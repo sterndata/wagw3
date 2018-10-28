@@ -218,19 +218,25 @@ div.box {
 
 .box .slide_caption {
   display:none;
+  visibility: hidden;
+  opacity: 0;
   color: #fff;
-   background: rgba(0,0,0,.3);
-   text-shadow: 1px 1px #444;
+  background: rgba(0,0,0,.3);
+  text-shadow: 1px 1px #444;
   width: 100%;
   height:calc( 100% - 7px);
   margin-top: -13em;
   padding-top: 30%;
   text-align:center;
   position: relative;
+  transition: visibility .25s, opacity .25s linear;
 }
 
 .box:hover .slide_caption {
-  display:block;
+   display:block;
+   visibility: visible;
+   opacity: 1;
+   height:calc( 100% - 7px);
 }
 
 .box img {
