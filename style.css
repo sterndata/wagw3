@@ -13,7 +13,7 @@
 .single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: calc( 1200px + 2em);
 }
 
 body.has-header-image .site-description {
@@ -201,58 +201,69 @@ nav#site-navigation, .main-navigation ul ul a {
 /* classes for grip-page.php template */
 div.grid {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 50% 50%;
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
   margin-bottom: 1.5em;
-}
-
-div.box {
-  background-color: #ccc;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 150%;
-  display: contents;
-}
-
-.box .slide_caption_wrapper {
-  visibility: hidden;
-  opacity: 0;
-  color: #fff;
-  background: rgba(0, 0, 0, .3);
-  text-shadow: 1px 1px #444;
-  width: 100%;
-  margin-top: -81%;
-  padding-top: 30%;
-  text-align: center;
-  position: relative;
-  transition: opacity .25s linear;
-}
-
-.box .slide_caption {
-  display: block;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
+@media screen and (min-width: 48em) {
 
-.box:hover .slide_caption_wrapper {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-  height: calc(100% - 2em);
-}
+ div.grid {
+   display: grid;
+   grid-template-columns: 33% 33% 33%;
+   grid-gap: 10px;
+   background-color: #fff;
+   color: #444;
+   margin-bottom: 1.5em;
+ }
 
-.box img {
-  transform: scale(.9);
-  transition-duration: .25s;
-}
+ div.box {
+   background-color: #ccc;
+   color: #fff;
+   border-radius: 5px;
+   font-size: 150%;
+   display: contents;
+ }
 
-.box:hover img {
-  transform: scale(1);
-}
+ .box .slide_caption_wrapper {
+   visibility: hidden;
+   opacity: 0;
+   color: #fff;
+   background: rgba(0, 0, 0, .3);
+   text-shadow: 1px 1px #444;
+   width: 100%;
+   margin-top: -81%;
+   padding-top: 30%;
+   text-align: center;
+   position: relative;
+   transition: opacity .25s linear;
+ }
 
+ .box .slide_caption {
+   display: block;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+ }
+
+ .box:hover .slide_caption_wrapper {
+   display: block;
+   visibility: visible;
+   opacity: 1;
+   height: calc(100% - 2em);
+ }
+
+ .box img {
+   transform: scale(.9);
+   transition-duration: .25s;
+ }
+
+ .box:hover img {
+   transform: scale(1);
+ }
+)
 /**** end grid *******/
 /* anchor offset for fixed-height header */
 div.sds-anchor {
@@ -364,12 +375,10 @@ button.menu-toggle:before {
     margin-top: -9px;
     margin-left: -20px;
   }
-
   .page-one-column .panel-content .wrap, .navigation-top .wrap, .wrap {
-    max-width: 1200px;
+    max-width: calc( 1200px + 2em);
     /* was 740 */
   }
-
   .page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header {
     margin-bottom: 1em;
   }
