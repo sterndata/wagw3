@@ -24,7 +24,6 @@
 <?php
 while ( have_rows( 'slides' ) ) { the_row();
 	$image = get_sub_field( 'slide_image' );
-	$slide_title = get_sub_field( 'slide_title' );
 	$slide_caption = get_sub_field( 'slide_caption' );
 	$slide_target = get_sub_field( 'slide_target' );
 	if ( $slide_target ) {
