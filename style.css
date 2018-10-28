@@ -218,11 +218,27 @@ div.box {
 
 .box .slide_caption {
   display:none;
+  color: #fff;
+   background: rgba(0,0,0,.3);
+   text-shadow: 1px 1px #444;
+  width: 100%;
+  height:calc( 100% - 7px);
+  margin-top: -13em;
+  padding-top: 30%;
+  text-align:center;
+  position: relative;
 }
+
 .box:hover .slide_caption {
- display:block;
- text-align:center;
- margin-top:-50%;
+  display:block;
+}
+
+.box img {
+  transform: scale(.9);
+  transition-duration: .25s;
+}
+.box:hover img {
+  transform: scale(1);
 }
 
 
