@@ -224,18 +224,23 @@ div.grid {
    color: #fff;
    border-radius: 5px;
    font-size: 150%;
-   display: contents;
+   display: block;
+   overflow: hidden;
+   position:relative;
+   background: transparent;
  }
 
  .box .slide_caption_wrapper {
+   display:none;
    visibility: hidden;
    opacity: 0;
    color: #fff;
-   background: rgba(0, 0, 0, .3);
+   background: rgba(243, 115, 33, 0.7);
+   /* background: rgba(0, 0, 0, .3); */
    text-shadow: 1px 1px #444;
    width: 100%;
-   margin-top: -81%;
-   padding-top: 30%;
+   margin-top: -82%;
+   padding-top: 40%;
    text-align: center;
    position: relative;
    transition: opacity .25s linear;
@@ -256,12 +261,15 @@ div.grid {
  }
 
  .box img {
-   transform: scale(.9);
+   transform: scale(1);
    transition-duration: .25s;
+   display:block;
+   overflow: hidden;
  }
 
  .box:hover img {
-   transform: scale(1);
+   transform: scale(1.25);
+   transition-duration: .25s;
  }
 )
 /**** end grid *******/
