@@ -45,7 +45,7 @@ while ( have_rows( 'slides' ) ) { the_row();
 	<?php 
 	if ( get_field( 'show_image_captions' ) ) { 
 		if ( $slide_caption ) { 
-			echo '<span class="slide_caption">'. $slide_caption . '</span>'; 
+			echo '<span class="slide_caption_wrapper"><span class="slide_caption">'. $slide_caption . '</span></span>'; 
 		} 
 	} // captions ?>
 <?php if ( $slide_target ) { echo '</a>'; } ?>
