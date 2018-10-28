@@ -405,7 +405,7 @@ div.grid {
     }
 
     .page-one-column .panel-content .wrap, .navigation-top .wrap, .wrap {
-      max-width: calc(1200px + 2em);
+      max-width: calc(1200px + 4em);
       /* was 740 */
     }
 
