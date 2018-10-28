@@ -216,6 +216,43 @@ div.box {
   display: contents;
 }
 
+.box .slide_caption_wrapper {
+  visibility: hidden;
+  opacity: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, .3);
+  text-shadow: 1px 1px #444;
+  width: 100%;
+  margin-top: -81%;
+  padding-top: 30%;
+  text-align: center;
+  position: relative;
+  transition: opacity .25s linear;
+}
+
+.box .slide_caption {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.box:hover .slide_caption_wrapper {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: calc(100% - 2em);
+}
+
+.box img {
+  transform: scale(.9);
+  transition-duration: .25s;
+}
+
+.box:hover img {
+  transform: scale(1);
+}
+
 /**** end grid *******/
 /* anchor offset for fixed-height header */
 div.sds-anchor {
@@ -226,31 +263,29 @@ div.sds-anchor {
 }
 
 /* menu toggle */
-
 button.menu-toggle {
-   width: 100%;
+  width: 100%;
 }
 
 button.menu-toggle:before {
-   content: "";
-   background-image:url('http://wagw3.sterndata.com/wp-content/uploads/cropped-WAWG-Logo.png');
-   background-repeat:no-repeat;
-   display:block;
-   height: 100px;
-   background-size: contain;
+  content: "";
+  background-image: url('http://wagw3.sterndata.com/wp-content/uploads/cropped-WAWG-Logo.png');
+  background-repeat: no-repeat;
+  display: block;
+  height: 100px;
+  background-size: contain;
 }
 
 .home .menu-toggle:before {
-   content:none;
+  content: none;
 }
 
 .site-content {
-    padding-left: 1em;
-    padding-right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 @media screen and (min-width: 48em) {
-
   .site-header .navigation-top .menu-scroll-down {
     color: #fff;
     top: 0.7em;
@@ -298,7 +333,7 @@ button.menu-toggle:before {
     opacity: 0;
   }
 
-  .main-navigation a{
+  .main-navigation a {
     padding-left: .75em;
     padding-right: .75em;
   }

@@ -24,7 +24,6 @@
 <?php
 while ( have_rows( 'slides' ) ) { the_row();
 	$image = get_sub_field( 'slide_image' );
-	$slide_title = get_sub_field( 'slide_title' );
 	$slide_caption = get_sub_field( 'slide_caption' );
 	$slide_target = get_sub_field( 'slide_target' );
 	if ( $slide_target ) {
@@ -42,12 +41,15 @@ while ( have_rows( 'slides' ) ) { the_row();
 		$src_set = '';
 	}
 ?>
-<div class="box"><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /><?php if ( $slide_target ) { echo '</a>'; } ?>
-	<?php if ( get_field( 'show_image_captions' ) ) { ?>
-		<div class="flex-caption">
-	<?php if ( $slide_title ) { ?> <span class="caption_title"><?php echo $slide_title; }?>
-	<?php if ( $slide_caption ) { ?></span><?php echo $slide_caption; } ?></div>
-	<?php } // captions ?>
+<div class="box"><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /> 
+	<?php 
+	if ( get_field( 'show_image_captions' ) ) { 
+		if ( $slide_caption ) { 
+			echo '<span class="slide_caption_wrapper"><span class="slide_caption">'. $slide_caption . '</span></span>'; 
+		} 
+	} // captions ?>
+<?php if ( $slide_target ) { echo '</a>'; } ?>
+
 		</div><!-- box -->
 	<?php } // while have rows ?>
 </div><!-- grid -->
