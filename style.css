@@ -257,7 +257,7 @@ div.grid {
    display: block;
    visibility: visible;
    opacity: 1;
-   height: calc(100% - 2em);
+   height: calc(100% + 2em);
  }
 
  .box img {
