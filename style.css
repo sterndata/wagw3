@@ -243,7 +243,7 @@ div.grid {
    padding-top: 40%;
    text-align: center;
    position: relative;
-   transition: opacity .25s linear;
+   transition: visibility .25s linear;
  }
 
  .box .slide_caption {
