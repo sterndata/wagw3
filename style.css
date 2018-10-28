@@ -208,6 +208,19 @@ div.grid {
   margin-bottom: 1.5em;
   overflow: hidden;
 }
+
+.box .slide_caption {
+  display:block;
+  text-align:center;
+}
+
+.box .slide_tag {
+  display:block;
+  text-align:center;
+  font-style: italic;
+  font-size: 85%;
+}
+
 @media screen and (min-width: 48em) {
 
  div.grid {
