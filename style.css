@@ -253,7 +253,8 @@ div.grid {
     visibility: hidden;
     opacity: 0;
     color: #fff;
-    background: rgba(243, 115, 33, 0.7);
+/*    background: rgba(243, 115, 33, 0.7); */
+    background: rgba(117, 67, 154, 0.5);
     /* background: rgba(0, 0, 0, .3); */
     text-shadow: 1px 1px #444;
     width: 100%;
@@ -266,9 +267,10 @@ div.grid {
 
   .box .slide_caption {
     display: block;
-    white-space: nowrap;
+  /*  white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  */
   }
 
   .box:hover .slide_caption_wrapper {
