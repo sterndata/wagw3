@@ -1,6 +1,6 @@
 {
     "key": "group_5bae7a9dbab6b",
-    "title": "Grid Page",
+    "title": "Grid (Grid) Page",
     "fields": [
         {
             "key": "field_5bae7a9dc1af7",
@@ -41,6 +41,25 @@
                     "new_lines": ""
                 },
                 {
+                    "key": "field_5bd6091ca5b76",
+                    "label": "Tag",
+                    "name": "slide_tag",
+                    "type": "textarea",
+                    "instructions": "One or two words",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
                     "key": "field_5bae7a9dc445f",
                     "label": "Target",
                     "name": "slide_target",
@@ -55,25 +74,6 @@
                     },
                     "default_value": "",
                     "placeholder": "http:\/\/www.example.com"
-                },
-                {
-                    "key": "field_5bd6091ca5b76",
-                    "label": "Tag",
-                    "name": "slide_tag",
-                    "type": "text",
-                    "instructions": "One or two words",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
                 },
                 {
                     "key": "field_5bae7a9dc44ae",
@@ -140,5 +140,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1540826088
+    "modified": 1540833959
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_5bd723422fe5e",
-    "title": "Lightbox Grid Page",
+    "title": "Grid (Lightbox) Page",
     "fields": [
         {
             "key": "field_5bd7234234788",
@@ -41,6 +41,25 @@
                     "new_lines": ""
                 },
                 {
+                    "key": "field_5bd7234236161",
+                    "label": "Tag",
+                    "name": "slide_tag",
+                    "type": "textarea",
+                    "instructions": "One or two words",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
                     "key": "field_5bd723423611c",
                     "label": "Target",
                     "name": "slide_target",
@@ -55,25 +74,6 @@
                     },
                     "default_value": "",
                     "placeholder": "http:\/\/www.example.com"
-                },
-                {
-                    "key": "field_5bd7234236161",
-                    "label": "Tag",
-                    "name": "slide_tag",
-                    "type": "text",
-                    "instructions": "One or two words",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
                 },
                 {
                     "key": "field_5bd72342361e2",
@@ -145,5 +145,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1540826150
+    "modified": 1540833997
 }
