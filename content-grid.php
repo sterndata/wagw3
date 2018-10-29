@@ -34,7 +34,7 @@ while ( have_rows( 'slides' ) ) { the_row();
 				$href .= ' target=_blank ';
 			}
 		}
-		$href .= '>';
+		$href .= ' title="Click to see more.">';
 	}
 	if ( $use_srcset ) {
 		$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
@@ -45,9 +45,11 @@ while ( have_rows( 'slides' ) ) { the_row();
 <div class="box"><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /> 
 	<?php 
 	if ( get_field( 'show_image_captions' ) ) { 
+		echo '<span class="slide_caption_wrapper">';
 		if ( $slide_caption ) { 
-			echo '<span class="slide_caption_wrapper"><span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span></span>'; 
+			echo '<span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span>'; 
 		} 
+	echo '</span>';
 	} // captions ?>
 <?php if ( $slide_target ) { echo '</a>'; } ?>
 

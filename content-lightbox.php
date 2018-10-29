@@ -27,12 +27,12 @@ $content_id = 0;
 
 while ( have_rows( 'slides' ) ) {
 	the_row();
-	$image         = get_sub_field( 'slide_image' );
-        $lightbox_image= get_sub_field( 'lightbox_image' );
-	$slide_caption = get_sub_field( 'slide_caption' );
-	$slide_tag     = get_sub_field( 'slide_tag' );
-	$srcset_grid = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
-	$srcset_lightbox = ' srcset ="' . wp_get_attachment_image_srcset( $lightbox_image['id'] ) . '" ';
+	$image              = get_sub_field( 'slide_image' );
+		$lightbox_image = get_sub_field( 'lightbox_image' );
+	$slide_caption      = get_sub_field( 'slide_caption' );
+	$slide_tag          = get_sub_field( 'slide_tag' );
+	$srcset_grid        = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
+	$srcset_lightbox    = ' srcset ="' . wp_get_attachment_image_srcset( $lightbox_image['id'] ) . '" ';
 	?>
 	<div id="<?php echo 'my-content-id-' . $content_id; ?>" style="display:none;">
 		<p>
@@ -42,7 +42,7 @@ while ( have_rows( 'slides' ) ) {
 	</div>
 
 	<?php
-	$href = '<a href="#TB_inline?width=800&inlineId=my-content-id-' . $content_id++ . '" class="thickbox thickbox-size">';
+	$href = '<a href="#TB_inline?width=800&inlineId=my-content-id-' . $content_id++ . '" class="thickbox thickbox-size" title="Click to see more.">';
 	?>
 
 <div class="box">
@@ -52,15 +52,17 @@ while ( have_rows( 'slides' ) ) {
 	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $srcset_grid; ?> />
 	<?php
 	if ( get_field( 'show_image_captions' ) ) {
+		echo '<span class="slide_caption_wrapper">';
 		if ( $slide_caption ) {
-			echo '<span class="slide_caption_wrapper"><span class="slide_caption">' . $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span></span>';
+			echo '<span class="slide_caption">' . $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span>';
 		}
+		echo '</span>';
 	} // captions
 	?>
 	</a>
 
 		</div><!-- box -->
-	<?php } // while have rows                           ?>
+	<?php } // while have rows                                                     ?>
 </div><!-- grid -->
 <?php
 } // images
