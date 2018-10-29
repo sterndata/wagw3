@@ -473,15 +473,21 @@ div.grid {
     }
   }
 
-#TB_window {
-  width: 90% !important;
-  height: 90% !important;
-}
-#TB_window {
-  margin-left: -45% !important;
-  top: 30% !important;
-}
-#TB_ajaxContent {
-  width: 100% !important;
-  height: 90% !important;
+@media screen and (min-width: 48em) {
+ 
+ #TB_window {
+   width: 90% !important;
+   height: 90% !important;
+ }
+ 
+ #TB_window {
+   margin-left: -45% !important;
+   top: 30% !important;
+ }
+ 
+ #TB_ajaxContent {
+   width: 100% !important;
+   height: 90% !important;
+ }
+
 }
