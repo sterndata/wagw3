@@ -38,7 +38,7 @@ while ( have_rows( 'slides' ) ) {
 	<div id="<?php echo 'my-content-id-' . $content_id; ?>" style="display:none;">
 		<p>
 		<?php echo '<span class="slide_caption_wrapper"><span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span></span>'; ?>
-		<img src="<?php echo $image['url']; ?>" <?php // echo $srcset; ?> class="aligncenter" >
+		<img src="<?php echo $image['url']; ?>" <?php echo $srcset; ?> class="aligncenter" >
 		</p>
 	</div>
 	
