@@ -6,6 +6,8 @@
  */
 ?>
 
+<?php add_thickbox(); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php if ( ! is_front_page() ) { ?>
 
@@ -13,43 +15,49 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 	<?php
-
+}
 	if ( have_rows( 'slides' ) ) {
-		$use_srcset = false;
-		if ( function_exists( 'wp_get_attachment_image_srcset' ) ) { $use_srcset = true; }
-		/// ?>
+	?>
 
 <div id="grid" class="grid">
 
 <?php
-while ( have_rows( 'slides' ) ) { the_row();
+
+$content_id = 0;
+
+while ( have_rows( 'slides' ) ) { 
+	the_row();
 	$image = get_sub_field( 'slide_image' );
 	$slide_caption = get_sub_field( 'slide_caption' );
 	$slide_tag = get_sub_field( 'slide_tag' );
-	$slide_target = get_sub_field( 'slide_target' );
-	if ( $slide_target ) {
-		$href = '<a href="' . $slide_target . '"';
-		if ( get_sub_field( 'new_window' ) ) {
-			if ( ! wp_is_mobile() ) {
-				$href .= ' target=_blank ';
-			}
-		}
-		$href .= '>';
-	}
-	if ( $use_srcset ) {
-		$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
-	} else {
-		$src_set = '';
-	}
-?>
-<div class="box"><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /> 
+/*
+ * slide target is a the same image, full size, shown in the thickbox
+ */
+	$srcset = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
+	?>
+	<div id="<?php echo 'my-content-id-' . $content_id; ?>" style="display:none;">
+		<p>
+		<?php echo '<span class="slide_caption_wrapper"><span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span></span>'; ?>
+		<img src="<?php echo $image['url']; ?>" <?php // echo $srcset; ?> class="aligncenter" >
+		</p>
+	</div>
+	
+	<?php
+	$href = '<a href="#TB_inline?width=800&inlineId=my-content-id-' . $content_id++ . '" class="thickbox thickbox-size">';
+	?>
+
+<div class="box">
+	<?php 
+		echo $href; 
+	?>
+	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $srcset; ?> /> 
 	<?php 
 	if ( get_field( 'show_image_captions' ) ) { 
 		if ( $slide_caption ) { 
 			echo '<span class="slide_caption_wrapper"><span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span></span>'; 
 		} 
 	} // captions ?>
-<?php if ( $slide_target ) { echo '</a>'; } ?>
+	</a>
 
 		</div><!-- box -->
 	<?php } // while have rows ?>
@@ -58,7 +66,6 @@ while ( have_rows( 'slides' ) ) { the_row();
 	} // images
 
 ?>
-<?php } ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

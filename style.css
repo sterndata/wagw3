@@ -209,12 +209,12 @@ div.grid {
   overflow: hidden;
 }
 
-.box .slide_caption {
+.slide_caption {
   display: block;
   text-align: center;
 }
 
-.box .slide_tag {
+.slide_tag {
   display: block;
   text-align: center;
   font-style: italic;
@@ -470,3 +470,12 @@ div.grid {
       float: right;
     }
   }
+
+#TB_ajaxContent, #TB_window {
+  width: 90% !important;
+  height: 90% !important;
+}
+#TB_window {
+  margin-left: -45% !important;
+  top: 30% !important;
+}
