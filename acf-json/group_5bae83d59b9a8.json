@@ -35,8 +35,8 @@
                 "id": ""
             },
             "choices": {
-                "Lightbox": "Lightbox",
-                "Use Link": "Use Link"
+                "lightbox": "Lightbox",
+                "link": "Use Link"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -63,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Hero Slider Options",
-    "modified": 1540761902
+    "modified": 1540820422
 }
