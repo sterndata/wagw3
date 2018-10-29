@@ -1,6 +1,6 @@
 {
     "key": "group_5bae7a9dbab6b",
-    "title": "Portfolio Grid",
+    "title": "Grid Page",
     "fields": [
         {
             "key": "field_5bae7a9dc1af7",
@@ -23,7 +23,7 @@
             "sub_fields": [
                 {
                     "key": "field_5bae7a9dc440b",
-                    "label": "Slide Caption",
+                    "label": "Caption",
                     "name": "slide_caption",
                     "type": "textarea",
                     "instructions": "Keep it short - try for just one line",
@@ -42,7 +42,7 @@
                 },
                 {
                     "key": "field_5bae7a9dc445f",
-                    "label": "Slide Target",
+                    "label": "Target",
                     "name": "slide_target",
                     "type": "url",
                     "instructions": "Enter a link to a page on this site or to a remote site",
@@ -58,7 +58,7 @@
                 },
                 {
                     "key": "field_5bd6091ca5b76",
-                    "label": "Slide Tag",
+                    "label": "Tag",
                     "name": "slide_tag",
                     "type": "text",
                     "instructions": "One or two words",
@@ -96,7 +96,7 @@
                 },
                 {
                     "key": "field_5bae7a9dc44fb",
-                    "label": "Slide Image",
+                    "label": "Image",
                     "name": "slide_image",
                     "type": "image",
                     "instructions": "All slides should be the same height.",
@@ -140,5 +140,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1540753730
+    "modified": 1540826088
 }

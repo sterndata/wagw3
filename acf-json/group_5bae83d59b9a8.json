@@ -20,30 +20,6 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
-        },
-        {
-            "key": "field_5bd6286763bf9",
-            "label": "Display Options",
-            "name": "display_options",
-            "type": "radio",
-            "instructions": "If \"Lightbox\", the image is shown in a lightbox on click.  If \"Use Link\", then then image is a link to whatever's specified in that field.",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Lightbox": "Lightbox",
-                "Use Link": "Use Link"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "vertical",
-            "return_format": "value",
-            "save_other_choice": 0
         }
     ],
     "location": [
@@ -52,6 +28,13 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "grid-page.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "lightbox-page.php"
             }
         ]
     ],
@@ -63,5 +46,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Hero Slider Options",
-    "modified": 1540761902
+    "modified": 1540825865
 }
