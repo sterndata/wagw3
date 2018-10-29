@@ -28,17 +28,16 @@ $content_id = 0;
 while ( have_rows( 'slides' ) ) {
 	the_row();
 	$image         = get_sub_field( 'slide_image' );
+        $lightbox_image= get_sub_field( 'lightbox_image' );
 	$slide_caption = get_sub_field( 'slide_caption' );
 	$slide_tag     = get_sub_field( 'slide_tag' );
-	/*
-	* slide target is a the same image, full size, shown in the thickbox
-	*/
-	$srcset = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
+	$srcset_grid = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
+	$srcset_lightbox = ' srcset ="' . wp_get_attachment_image_srcset( $lightbox_image['id'] ) . '" ';
 	?>
 	<div id="<?php echo 'my-content-id-' . $content_id; ?>" style="display:none;">
 		<p>
 		<?php echo '<span class="slide_caption_wrapper"><span class="slide_caption">' . $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span></span>'; ?>
-		<img src="<?php echo $image['url']; ?>" <?php echo $srcset; ?> class="aligncenter" >
+		<img src="<?php echo $lightbox_image['url']; ?>" <?php echo $srcset_lightbox; ?> class="aligncenter" >
 		</p>
 	</div>
 
@@ -50,7 +49,7 @@ while ( have_rows( 'slides' ) ) {
 	<?php
 		echo $href;
 	?>
-	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $srcset; ?> />
+	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $srcset_grid; ?> />
 	<?php
 	if ( get_field( 'show_image_captions' ) ) {
 		if ( $slide_caption ) {
