@@ -319,6 +319,13 @@ button.menu-toggle:before {
   padding-right: 1em;
 }
 
+#secondary {
+  background-color: #c6ec8b;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 3em;
+}
+
 @media screen and (min-width: 48em) {
   .site-header .navigation-top .menu-scroll-down {
     color: #fff;
@@ -416,6 +423,7 @@ button.menu-toggle:before {
 
   .has-sidebar #secondary {
     width: 20%;
+    padding-top: 3em;
   }
 
   .has-sidebar:not(.error404) #primary {
