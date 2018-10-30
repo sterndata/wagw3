@@ -12,6 +12,10 @@
 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 </header><!-- .entry-header -->
 
+<div class="pre-case-content">
+			<?php the_content(); ?>
+</div>
+
 <?php
 if ( have_rows( 'case' ) ) {
 	while ( have_rows( 'case' ) ) {
@@ -29,6 +33,7 @@ if ( have_rows( 'case' ) ) {
 		?>
 
 		<div class="case-study">
+			<div class="sds-anchor" id="<?php echo sanitize_title_with_dashes( $case_title ); ?>"></div>
 			<h2 class="title"><?php echo esc_html( $case_title ); ?></h2>
 			<div class="image-row">
 				<span class="title-before"><?php echo esc_html( $before_title ); ?></span>
@@ -69,7 +74,6 @@ if ( have_rows( 'case' ) ) {
 
 ?>
 	<div class="entry-content">
-		<?php the_content(); ?>
 		<?php
 			wp_link_pages(
 				array(
