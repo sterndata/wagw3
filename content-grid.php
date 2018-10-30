@@ -13,6 +13,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 	<?php
+	the_content();
 
 	if ( have_rows( 'slides' ) ) {
 		$use_srcset = false;
@@ -34,7 +35,7 @@ while ( have_rows( 'slides' ) ) { the_row();
 				$href .= ' target=_blank ';
 			}
 		}
-		$href .= ' title="Click to see more.">';
+		$href .= ' >';
 	}
 	if ( $use_srcset ) {
 		$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
@@ -42,13 +43,13 @@ while ( have_rows( 'slides' ) ) { the_row();
 		$src_set = '';
 	}
 ?>
-<div class="box"><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /> 
-	<?php 
-	if ( get_field( 'show_image_captions' ) ) { 
+<div class="box"><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> />
+	<?php
+	if ( get_field( 'show_image_captions' ) ) {
 		echo '<span class="slide_caption_wrapper">';
-		if ( $slide_caption ) { 
-			echo '<span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span>'; 
-		} 
+		if ( $slide_caption ) {
+			echo '<span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span>';
+		}
 	echo '</span>';
 	} // captions ?>
 <?php if ( $slide_target ) { echo '</a>'; } ?>
@@ -62,7 +63,6 @@ while ( have_rows( 'slides' ) ) { the_row();
 ?>
 <?php } ?>
 	<div class="entry-content">
-		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'wagw' ),

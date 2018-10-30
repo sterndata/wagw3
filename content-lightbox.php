@@ -15,6 +15,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 	<?php
+	the_content();
 }
 if ( have_rows( 'slides' ) ) {
 	?>
@@ -42,7 +43,7 @@ while ( have_rows( 'slides' ) ) {
 	</div>
 
 	<?php
-	$href = '<a href="#TB_inline?width=800&inlineId=my-content-id-' . $content_id++ . '" class="thickbox thickbox-size" title="Click to see more.">';
+	$href = '<a href="#TB_inline?width=800&inlineId=my-content-id-' . $content_id++ . '" class="thickbox thickbox-size" >';
 	?>
 
 <div class="box">
@@ -69,7 +70,7 @@ while ( have_rows( 'slides' ) ) {
 
 ?>
 	<div class="entry-content">
-		<?php the_content(); ?>
+
 		<?php
 			wp_link_pages(
 				array(
