@@ -253,9 +253,7 @@ div.grid {
     visibility: hidden;
     opacity: 0;
     color: #fff;
-/*    background: rgba(243, 115, 33, 0.7); */
     background: rgba(117, 67, 154, 0.5);
-    /* background: rgba(0, 0, 0, .3); */
     text-shadow: 1px 1px #444;
     width: 100%;
     margin-top: -82%;
@@ -267,10 +265,6 @@ div.grid {
 
   .box .slide_caption {
     display: block;
-  /*  white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  */
   }
 
   .box:hover .slide_caption_wrapper {
@@ -291,202 +285,199 @@ div.grid {
     transform: scale(1.20);
     transition-duration: .25s;
   }
-
 }
 
-  /**** end grid *******/
-  /* anchor offset for fixed-height header */
-  div.sds-anchor {
+/**** end grid *******/
+/* anchor offset for fixed-height header */
+div.sds-anchor {
+  display: block;
+  position: relative;
+  top: -110px;
+  visibility: hidden;
+}
+
+/* menu toggle */
+button.menu-toggle {
+  width: 100%;
+}
+
+button.menu-toggle:before {
+  content: "";
+  background-image: url('http://wagw3.sterndata.com/wp-content/uploads/cropped-WAWG-Logo.png');
+  background-repeat: no-repeat;
+  display: block;
+  height: 100px;
+  background-size: contain;
+}
+
+.home .menu-toggle:before {
+  content: none;
+}
+
+.site-content {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+@media screen and (min-width: 48em) {
+  .site-header .navigation-top .menu-scroll-down {
+    color: #fff;
+    top: 0.7em;
+  }
+
+  .navigation-top a, .navigation-top a:hover {
+    color: #fff;
+  }
+
+  #top-menu li.menu-item:hover {
+    background-color: #98CA49;
+  }
+
+  .navigation-top .current-menu-item>a, .navigation-top .current_page_item>a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  .main-navigation ul ul {
+    background: linear-gradient(180deg, rgba(243, 115, 33, 1), rgba(243, 115, 33, .9));
+  }
+
+  .wagw_col {
+    width: 33%;
+  }
+
+  .wagw_col_left {
+    float: left;
+    padding-right: .5em;
+  }
+
+  .wagw_col_center {
+    float: left;
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+  .wagw_col_right {
+    float: right;
+  }
+
+  .navigation-top .nav-image {
+    float: left;
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .main-navigation a {
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+
+  .navigation-top.site-navigation-fixed .nav-image {
+    float: left;
+    opacity: 1;
+  }
+
+  .navigation-top.site-navigation-fixed span.tagline {
     display: block;
+    text-align: right;
+    right: 12%;
     position: relative;
-    top: -110px;
-    visibility: hidden;
+    color: #fff;
+    font-size: 200%;
+    opacity: 1;
   }
 
-  /* menu toggle */
-  button.menu-toggle {
-    width: 100%;
+  .nav-image, span.tagline {
+    transition: opacity .5s;
   }
 
-  button.menu-toggle:before {
-    content: "";
-    background-image: url('http://wagw3.sterndata.com/wp-content/uploads/cropped-WAWG-Logo.png');
-    background-repeat: no-repeat;
-    display: block;
-    height: 100px;
-    background-size: contain;
+  .nav-image img.custom-logo {
+    max-height: 109px;
+    position: relative;
+    margin-bottom: -41px;
+    margin-top: -9px;
+    margin-left: -20px;
   }
 
-  .home .menu-toggle:before {
-    content: none;
+  .page-one-column .panel-content .wrap, .navigation-top .wrap, .wrap {
+    max-width: calc(1200px + 4em);
+    /* was 740 */
+  }
+
+  .page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header {
+    margin-bottom: 1em;
+  }
+
+  .has-sidebar #secondary {
+    width: 20%;
+  }
+
+  .has-sidebar:not(.error404) #primary {
+    width: 75%;
+  }
+
+  .twentyseventeen-front-page.has-header-image .custom-header-media,
+  .twentyseventeen-front-page.has-header-video .custom-header-media,
+  .home.blog.has-header-image .custom-header-media,
+  .home.blog.has-header-video .custom-header-media {
+    height: 600px;
+    height: 80vh;
+    max-height: 600px;
+    overflow: hidden;
+  }
+
+  .panel-image {
+    height: 80vh;
+    max-height: 600px;
   }
 
   .site-content {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 1em;
   }
 
-  @media screen and (min-width: 48em) {
-    .site-header .navigation-top .menu-scroll-down {
-      color: #fff;
-      top: 0.7em;
-    }
-
-    .navigation-top a, .navigation-top a:hover {
-      color: #fff;
-    }
-
-    #top-menu li.menu-item:hover {
-      background-color: #98CA49;
-    }
-
-    .navigation-top .current-menu-item>a, .navigation-top .current_page_item>a {
-      color: #fff;
-      border-bottom: 1px solid #fff;
-    }
-
-    .main-navigation ul ul {
-      background: linear-gradient(180deg, rgba(243, 115, 33, 1), rgba(243, 115, 33, .9));
-    }
-
-    .wagw_col {
-      width: 33%;
-    }
-
-    .wagw_col_left {
-      float: left;
-      padding-right: .5em;
-    }
-
-    .wagw_col_center {
-      float: left;
-      padding-left: .5em;
-      padding-right: .5em;
-    }
-
-    .wagw_col_right {
-      float: right;
-    }
-
-    .navigation-top .nav-image {
-      float: left;
-      display: inline-block;
-      opacity: 0;
-    }
-
-    .main-navigation a {
-      padding-left: .75em;
-      padding-right: .75em;
-    }
-
-    .navigation-top.site-navigation-fixed .nav-image {
-      float: left;
-      opacity: 1;
-    }
-
-    .navigation-top.site-navigation-fixed span.tagline {
-      display: block;
-      text-align: right;
-      right: 12%;
-      position: relative;
-      color: #fff;
-      font-size: 200%;
-      opacity: 1;
-    }
-
-    .nav-image, span.tagline {
-      transition: opacity .5s;
-    }
-
-    .nav-image img.custom-logo {
-      max-height: 109px;
-      position: relative;
-      margin-bottom: -41px;
-      margin-top: -9px;
-      margin-left: -20px;
-    }
-
-    .page-one-column .panel-content .wrap, .navigation-top .wrap, .wrap {
-      max-width: calc(1200px + 4em);
-      /* was 740 */
-    }
-
-    .page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header {
-      margin-bottom: 1em;
-    }
-
-    .has-sidebar #secondary {
-      width: 20%;
-    }
-
-    .has-sidebar:not(.error404) #primary {
-      width: 75%;
-    }
-
-    .twentyseventeen-front-page.has-header-image .custom-header-media,
-    .twentyseventeen-front-page.has-header-video .custom-header-media,
-    .home.blog.has-header-image .custom-header-media,
-    .home.blog.has-header-video .custom-header-media {
-      height: 600px;
-      height: 80vh;
-      max-height: 600px;
-      overflow: hidden;
-    }
-
-    .panel-image {
-      height: 80vh;
-      max-height: 600px;
-    }
-
-    .site-content {
-      padding: 1em;
-    }
-
-    .site-content-contain {
-      padding-top: 110px;
-    }
-
-    .home .site-content-contain {
-      padding-top: 0;
-    }
-
-    .sharedaddy.sd-sharing-enabled {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding-left: 3em;
-    }
-
-    .site-footer {
-      margin-top: 0;
-    }
-
-    .site-footer .widget-column.footer-widget-1, .site-footer .widget-column.footer-widget-2 {
-      width: 50%;
-    }
-
-    .social-navigation {
-      float: right;
-    }
-
-    .social-navigation ul {
-      float: right;
-    }
+  .site-content-contain {
+    padding-top: 110px;
   }
+
+  .home .site-content-contain {
+    padding-top: 0;
+  }
+
+  .sharedaddy.sd-sharing-enabled {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 3em;
+  }
+
+  .site-footer {
+    margin-top: 0;
+  }
+
+  .site-footer .widget-column.footer-widget-1, .site-footer .widget-column.footer-widget-2 {
+    width: 50%;
+  }
+
+  .social-navigation {
+    float: right;
+  }
+
+  .social-navigation ul {
+    float: right;
+  }
+}
 
 @media screen and (min-width: 48em) {
- 
- #TB_window {
-   width: 90% !important;
-   height: 90% !important;
-   margin-left: -45% !important;
-   top: 30% !important;
-   background-color: #000 !important;
-   color: #fff;
- }
- 
- #TB_ajaxContent {
-   width: 100% !important;
-   height: 90% !important;
- }
+  #TB_window {
+    width: 90% !important;
+    height: 90% !important;
+    margin-left: -45% !important;
+    top: 30% !important;
+    background-color: #000 !important;
+    color: #fff;
+  }
 
+  #TB_ajaxContent {
+    width: 100% !important;
+    height: 90% !important;
+  }
 }
