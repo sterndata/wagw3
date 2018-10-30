@@ -326,11 +326,11 @@ button.menu-toggle:before {
   padding-top: 3em;
 }
 
-.widget select, #secondary input[type="search"] {
+.widget select, #secondary input[type="search"], #subscribe-email input  {
   background: #c6ec8b;
 }
 
-#secondary .search-form .search-submit .icon {
+#secondary .search-form .search-submit .icon, #secondary input[type="submit"] {
   color: #c6ec8b;
 }
 
