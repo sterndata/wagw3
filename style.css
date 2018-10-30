@@ -326,7 +326,15 @@ button.menu-toggle:before {
   padding-top: 3em;
 }
 
-@media screen and (min-width: 48em) {
+.widget select, #secondary input[type="search"] {
+  background: #c6ec8b;
+}
+
+#secondary .search-form .search-submit .icon {
+  color: #c6ec8b;
+}
+
+@media screen and (min-width: 46em) {
   .site-header .navigation-top .menu-scroll-down {
     color: #fff;
     top: 0.7em;
