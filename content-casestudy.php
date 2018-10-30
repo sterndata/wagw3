@@ -14,7 +14,7 @@
 	</header><!-- .entry-header -->
 	<?php
 
-	if ( have_rows( 'slides' ) ) {
+	if ( have_rows( 'case' ) ) {
 		$use_srcset = false;
 		if ( function_exists( 'wp_get_attachment_image_srcset' ) ) { $use_srcset = true; }
 		/// ?>
@@ -22,42 +22,49 @@
 <div id="grid" class="grid">
 
 <?php
-while ( have_rows( 'slides' ) ) { the_row();
-	$image = get_sub_field( 'slide_image' );
-	$slide_caption = get_sub_field( 'slide_caption' );
-	$slide_tag = get_sub_field( 'slide_tag' );
-	$slide_target = get_sub_field( 'slide_target' );
-	if ( $slide_target ) {
-		$href = '<a href="' . $slide_target . '"';
-		if ( get_sub_field( 'new_window' ) ) {
-			if ( ! wp_is_mobile() ) {
-				$href .= ' target=_blank ';
-			}
-		}
-		$href .= ' title="Click to see more.">';
-	}
-	if ( $use_srcset ) {
-		$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
-	} else {
-		$src_set = '';
-	}
-?>
-<div class="box"><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /> 
-	<?php 
-	if ( get_field( 'show_image_captions' ) ) { 
-		echo '<span class="slide_caption_wrapper">';
-		if ( $slide_caption ) { 
-			echo '<span class="slide_caption">'. $slide_caption . '</span><span class="slide_tag">' . $slide_tag . '</span>'; 
-		} 
-	echo '</span>';
-	} // captions ?>
-<?php if ( $slide_target ) { echo '</a>'; } ?>
+while ( have_rows( 'case' ) ) {
+	the_row();
+	$title = get_sub_field( 'title' );
+	$before_image = get_sub_field( 'before_image' );
+	$after_image = get_sub_field( 'after_image' );
+	$before_title = get_sub_field( 'before_title' );
+	$after_title = get_sub_field( 'after_title' );
+	$challenge = get_sub_field( 'challenge' );
+	$fix = get_sub_field( 'fix' );
+	$result = get_sub_field( 'result' );
+	$src_set_before = ' srcset ="' . wp_get_attachment_image_srcset( $before_image['id'] ) . '" ';
+	$src_set_after = ' srcset ="' . wp_get_attachment_image_srcset( $after_image['id'] ) . '" ';
+	?>
+<div class="case_study">
+<h2 class="case-study-title"><?php echo $title; ?></h2>
+  <div class="image-row">
+	<img src="<?php echo $before_image['url']; ?>" alt="<?php echo $before_image['alt']; ?>" <?php echo $src_set_before; ?> />
+	<?php echo $before_title; ?>
+	<img src="<?php echo $after_image['url']; ?>" alt="<?php echo $after_image['alt']; ?>" <?php echo $src_set_after; ?> />
+	<?php echo $after_title; ?>
+</div><!--image-row-->
+<div class="text-row">
+	<div class="challenge">
+		<h3>Challenge</h3>
+		<?php echo $challenge; ?>
+	</div>
+	<div class="fix">
+		<h3>Fix</h3>
+		<?php echo $fix; ?>
+	</div>
+	<div class="result">
+		<h3>Result</h3>
+		<?php echo $result; ?>
+	</div>
+</div><!--text-row>
 
-		</div><!-- box -->
-	<?php } // while have rows ?>
+	<?php
+	?>
+</div><!-- case-study -->
+	<?php } // while have_rows ?>
 </div><!-- grid -->
 <?php
-	} // images
+} // if have_rows
 
 ?>
 <?php } ?>
