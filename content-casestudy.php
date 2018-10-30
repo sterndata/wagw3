@@ -4,77 +4,79 @@
  *
  * @package What A Great Website
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<?php if ( ! is_front_page() ) { ?>
-
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-	<?php
-
-	if ( have_rows( 'case' ) ) {
-		$use_srcset = false;
-		if ( function_exists( 'wp_get_attachment_image_srcset' ) ) { $use_srcset = true; }
-		/// ?>
-
-<div id="grid" class="grid">
+<header class="entry-header">
+<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+</header><!-- .entry-header -->
 
 <?php
-while ( have_rows( 'case' ) ) {
-	the_row();
-	$title = get_sub_field( 'title' );
-	$before_image = get_sub_field( 'before_image' );
-	$after_image = get_sub_field( 'after_image' );
-	$before_title = get_sub_field( 'before_title' );
-	$after_title = get_sub_field( 'after_title' );
-	$challenge = get_sub_field( 'challenge' );
-	$fix = get_sub_field( 'fix' );
-	$result = get_sub_field( 'result' );
-	$src_set_before = ' srcset ="' . wp_get_attachment_image_srcset( $before_image['id'] ) . '" ';
-	$src_set_after = ' srcset ="' . wp_get_attachment_image_srcset( $after_image['id'] ) . '" ';
-	?>
-<div class="case_study">
-<h2 class="case-study-title"><?php echo $title; ?></h2>
-  <div class="image-row">
-	<img src="<?php echo $before_image['url']; ?>" alt="<?php echo $before_image['alt']; ?>" <?php echo $src_set_before; ?> />
-	<?php echo $before_title; ?>
-	<img src="<?php echo $after_image['url']; ?>" alt="<?php echo $after_image['alt']; ?>" <?php echo $src_set_after; ?> />
-	<?php echo $after_title; ?>
-</div><!--image-row-->
-<div class="text-row">
-	<div class="challenge">
-		<h3>Challenge</h3>
-		<?php echo $challenge; ?>
-	</div>
-	<div class="fix">
-		<h3>Fix</h3>
-		<?php echo $fix; ?>
-	</div>
-	<div class="result">
-		<h3>Result</h3>
-		<?php echo $result; ?>
-	</div>
-</div><!--text-row>
+if ( have_rows( 'case' ) ) {
+	while ( have_rows( 'case' ) ) {
+		the_row();
+		$case_title     = get_sub_field( 'title' );
+		$before_image   = get_sub_field( 'before_image' );
+		$after_image    = get_sub_field( 'after_image' );
+		$before_title   = get_sub_field( 'before_title' );
+		$after_title    = get_sub_field( 'after_title' );
+		$challenge      = get_sub_field( 'challenge' );
+		$fix            = get_sub_field( 'fix' );
+		$result         = get_sub_field( 'result' );
+		$src_set_before = ' srcset ="' . wp_get_attachment_image_srcset( $before_image['id'] ) . '" ';
+		$src_set_after  = ' srcset ="' . wp_get_attachment_image_srcset( $after_image['id'] ) . '" ';
+		?>
 
+		<div class="case-study">
+			<h2 class="title"><?php echo esc_html( $case_title ); ?></h2>
+			<div class="image-row">
+				<span class="title-before"><?php echo esc_html( $before_title ); ?></span>
+									<span class="title-after"><?php echo esc_html( $after_title ); ?></span>
+								</div>
+			<div class="image-row">
+
+				<div class="before">
+					<img src="<?php echo $before_image['url']; ?>" alt="<?php echo $before_image['alt']; ?>" <?php echo $src_set_before; ?> />
+				</div>
+
+			<div class="after">
+
+				<img src="<?php echo $after_image['url']; ?>" alt="<?php echo $after_image['alt']; ?>" <?php echo $src_set_after; ?> />
+			</div>
+			</div><!--image-row-->
+
+			<div class="text-row">
+				<div class="challenge">
+					<h3>Challenge</h3>
+					<?php echo $challenge; ?>
+				</div>
+			<div class="fix">
+				<h3>Fix</h3>
+				<?php echo $fix; ?>
+			</div>
+
+			<div class="result">
+				<h3>Result</h3>
+				<?php echo $result; ?>
+			</div>
+		</div><!--text-row-->
+
+	</div><!-- case-study -->
 	<?php
-	?>
-</div><!-- case-study -->
-	<?php } // while have_rows ?>
-</div><!-- grid -->
-<?php
+	} // while have_rows
 } // if have_rows
 
 ?>
-<?php } ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'wagw' ),
-				'after'  => '</div>',
-			) );
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'wagw' ),
+					'after'  => '</div>',
+				)
+			);
 		?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">

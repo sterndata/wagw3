@@ -470,9 +470,7 @@ button.menu-toggle:before {
   .social-navigation ul {
     float: right;
   }
-}
 
-@media screen and (min-width: 48em) {
   #TB_window {
     width: 90% !important;
     height: 90% !important;
@@ -485,5 +483,78 @@ button.menu-toggle:before {
   #TB_ajaxContent {
     width: 100% !important;
     height: 90% !important;
+  }
+
+  /* case study classes */
+  .case-study {}
+
+  .case-study .title-before {
+    display: inline-block;
+    width: 31%;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-bottom: 1em;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1em;
+  }
+
+  .case-study .title-after {
+    display: inline-block;
+    width: 51%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1em;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1em;
+  }
+
+  .case-study .image-row {
+    display: block;
+  }
+
+  .case-study .image-row .before {
+    display: inline-block;
+    width: 39%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .case-study .image-row .after {
+    display: inline-block;
+    width: 59%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .case-study .text-row {
+    clear: both;
+    display: block;
+    border-top: 1px solid #aaa;
+    padding-top: 1em;
+  }
+
+  .case-study .text-row h3 {
+    text-align: center;
+  }
+
+  .case-study .challenge, .case-study .fix, .case-study .result {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+  }
+
+  .case-study .fix {
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+  .case-study .challenge {
+    padding-right: .5em;
+  }
+
+  .case-study .result {
+    padding-left: .5em;
   }
 }
