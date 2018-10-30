@@ -404,6 +404,12 @@ button.menu-toggle:before {
     /* was 740 */
   }
 
+  .entry-content {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header {
     margin-bottom: 1em;
   }
