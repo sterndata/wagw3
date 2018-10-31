@@ -41,6 +41,14 @@ h1, h2, h3, h4, h5, h6, p.site-title {
   font-family: Raleway, sans-serif;
 }
 
+h1.site-title {
+  font-size: 32px;
+}
+
+.custom-logo {
+    display: inline-block;
+}
+
 ul, ol {
   margin-left: 2em;
 }
