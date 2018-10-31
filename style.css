@@ -576,3 +576,16 @@ button.menu-toggle:before {
     padding-left: .5em;
   }
 }
+
+blockquote {
+   font-size:initial;
+   line-height: 1.5;
+   color: inherit;
+   font-style:normal;
+}
+
+blockquote:before {
+   border-top: 1px solid #98ca49;
+   display:block;
+   padding-bottom:1em;;
+}
