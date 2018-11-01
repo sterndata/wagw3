@@ -102,7 +102,8 @@ a, a:visited {
 }
 
 body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a, body.has-header-image .site-description, body.has-header-video .site-description {
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px #fff;
+  color: #000;
 }
 
 .page-one-column .panel-content .wrap {
