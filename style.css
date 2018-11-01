@@ -631,3 +631,7 @@ h2.widget-title {
     font-size: 125%;
     font-weight: bold;
 }
+
+.site-branding {
+   transition: margin .75s;
+}
