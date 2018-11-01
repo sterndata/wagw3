@@ -135,10 +135,6 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   color: #fff;
 }
 
-.navigation-top span.tagline {
-  display: none;
-  opacity: 0;
-}
 
 .single-featured-image-header {
   display: none;
@@ -408,13 +404,17 @@ button.menu-toggle:before {
     opacity: 1;
   }
 
-  .navigation-top.site-navigation-fixed span.tagline {
+  .navigation-top span.tagline {
     display: block;
     text-align: right;
     right: 12%;
     position: relative;
     color: #fff;
     font-size: 200%;
+    opacity: 0;
+  }
+
+  .navigation-top.site-navigation-fixed span.tagline {
     opacity: 1;
   }
 
