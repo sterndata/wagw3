@@ -102,8 +102,9 @@ a, a:visited {
 }
 
 body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a, body.has-header-image .site-description, body.has-header-video .site-description {
-  text-shadow: 1px 1px 1px #fff;
-  color: #000;
+  text-shadow: 1px 1px 1px #000;
+  color: #fff;
+  text-transform: lowercase;
 }
 
 .page-one-column .panel-content .wrap {
@@ -458,13 +459,26 @@ button.menu-toggle:before {
   .home.blog.has-header-image .custom-header-media,
   .home.blog.has-header-video .custom-header-media {
     height: 600px;
-    height: 80vh;
+    height: 128vh; /* was 80 */
     max-height: 600px;
     overflow: hidden;
   }
 
+
+
+div#wp-custom-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
   .panel-image {
-    height: 80vh;
+    height: 128vh;
     max-height: 600px;
   }
 
