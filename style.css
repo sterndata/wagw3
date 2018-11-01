@@ -131,10 +131,6 @@ body.has-header-image .site-title, body.has-header-video .site-title, body.has-h
   color: #fff;
 }
 
-.navigation-top .nav-image {
-  display: none;
-}
-
 .navigation-top span.tagline {
   display: none;
   opacity: 0;
