@@ -351,6 +351,10 @@ button.menu-toggle:before {
   color: #c6ec8b;
 }
 
+.nav-image {
+   display: none;
+}
+
 @media screen and (min-width: 46em) {
   .site-header .navigation-top .menu-scroll-down {
     color: #fff;
