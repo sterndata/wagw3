@@ -93,17 +93,14 @@ a, a:visited {
   text-transform: lowercase;
 }
 
-.site-main h2 {
+.site-main h2, .entry-content h2 {
   clear: none;
   padding-top: .25em;
   color: #98ca49;
   font-weight: bold;
 }
 
-.home .entry-content h2 {
-  color: #333;
-  font-weight: normal;
-}
+*/
 
 body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a, body.has-header-image .site-description, body.has-header-video .site-description {
   text-shadow: 1px 1px 1px #000;
