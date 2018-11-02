@@ -265,7 +265,7 @@ div.grid {
     visibility: hidden;
     opacity: 0;
     color: #fff;
-    background: rgba(117, 67, 154, 0.6);
+    background: rgba(117, 67, 154, 0.7);
     text-shadow: 1px 1px #444;
     width: 100%;
     margin-top: -82%;
@@ -284,6 +284,8 @@ div.grid {
     visibility: visible;
     opacity: 1;
     height: calc(100% + 2em);
+    padding-left:1em;
+    padding-right: 1em;
   }
 
   .box img {
