@@ -57,6 +57,15 @@ li {
    margin-bottom: .5em;
 }
 
+.page-id-662 .wagw_col ul {
+  list-style: none;
+  margin-left: 1em;
+}
+
+.page-id-662 .wagw_col ul li {
+  text-indent: -1em;
+}
+
 .site-main a, .entry-content a {
   font-weight: bold;
 }
