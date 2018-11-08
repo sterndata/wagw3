@@ -330,7 +330,7 @@ button.menu-toggle {
 
 button.menu-toggle:before {
   content: "";
-  background-image: url('http://wagw3.sterndata.com/wp-content/uploads/cropped-WAWG-Logo.png');
+  background-image: url('/wp-content/uploads/cropped-WAWG-Logo.png');
   background-repeat: no-repeat;
   display: block;
   height: 100px;
