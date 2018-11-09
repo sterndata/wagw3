@@ -5,7 +5,7 @@
  Author:       Steven Stern
  Author URI:   https://whatagreatwebsite.net
  Template:     twentyseventeen
- Version:      1.0.0
+ Version:      1.0.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  twentyseventeen
@@ -116,9 +116,8 @@ a, a:visited {
 }
 
 
-*/
 
-body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a, body.has-header-image .site-description, body.has-header-video .site-description {
+body.has-header-image .site-title, body.has-header-video .site-title, body.has-header-image .site-title a, body.has-header-video .site-title a, body.has-header-image .site-description, body.has-header-video .site-description,  body.has-header-image .site-title a {
   text-shadow: 1px 1px 1px #000;
   color: #fff;
   text-transform: lowercase;
