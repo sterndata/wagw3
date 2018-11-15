@@ -323,9 +323,20 @@ div.sds-anchor {
 }
 
 /* menu toggle */
-button.menu-toggle {
-  width: 100%;
+.js .menu-toggle {
+   display: inline;
 }
+
+.menu-toggle a.custom-logo-link {
+    padding-top: 0;
+}
+
+.menu-toggle img.custom-logo {
+    max-width: 100px;
+    margin: 0;
+    float: left;
+}
+
 .home .menu-toggle:before {
   content: none;
 }
@@ -358,6 +369,10 @@ button.menu-toggle {
   .site-header .navigation-top .menu-scroll-down {
     color: #fff;
     top: 0.7em;
+  }
+
+  .js .menu-toggle {
+   display: none;
   }
 
   .navigation-top a, .navigation-top a:hover {
