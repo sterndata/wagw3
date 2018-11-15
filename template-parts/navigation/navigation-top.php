@@ -10,7 +10,7 @@
 
 ?>
 <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentyseventeen' ); ?>">
-	<span class="menu-toggle"><?php the_custom_logo(); ?></span>
+	<span class="menu-toggle logo"><?php the_custom_logo(); ?></span>
 	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
 		<?php
 		echo twentyseventeen_get_svg( array( 'icon' => 'bars' ) );

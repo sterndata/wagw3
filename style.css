@@ -323,7 +323,9 @@ div.sds-anchor {
 }
 
 /* menu toggle */
-.js .menu-toggle {
+
+.home span.menu-toggle.logo {
+    display: none;
 }
 
 .menu-toggle a.custom-logo-link {
@@ -365,7 +367,7 @@ div.sds-anchor {
    display: none;
 }
 
-@media screen and (min-width: 46em) {
+@media screen and (min-width: 48em) {
   .site-header .navigation-top .menu-scroll-down {
     color: #fff;
     top: 0.7em;
