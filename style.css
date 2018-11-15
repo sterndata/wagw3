@@ -324,11 +324,11 @@ div.sds-anchor {
 
 /* menu toggle */
 .js .menu-toggle {
-   display: inline;
 }
 
 .menu-toggle a.custom-logo-link {
     padding-top: 0;
+    float:left;
 }
 
 .menu-toggle img.custom-logo {
@@ -337,8 +337,8 @@ div.sds-anchor {
     float: left;
 }
 
-.home .menu-toggle:before {
-  content: none;
+.home .menu-toggle img.custom-logo {
+  display: none;
 }
 
 .site-content {
