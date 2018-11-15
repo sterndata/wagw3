@@ -326,16 +326,6 @@ div.sds-anchor {
 button.menu-toggle {
   width: 100%;
 }
-
-button.menu-toggle:before {
-  content: "";
-  background-image: url('/wp-content/uploads/cropped-WAWG-Logo.png');
-  background-repeat: no-repeat;
-  display: block;
-  height: 100px;
-  background-size: contain;
-}
-
 .home .menu-toggle:before {
   content: none;
 }
