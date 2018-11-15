@@ -324,6 +324,10 @@ div.sds-anchor {
 
 /* menu toggle */
 
+button.menu-toggle {
+   float:right;
+}
+
 .home span.menu-toggle.logo {
     display: none;
 }
