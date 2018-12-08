@@ -661,5 +661,5 @@ h2.widget-title {
 }
 
 .site-branding {
-   transition: margin .75s;
+   transition: margin 0.1s;
 }
