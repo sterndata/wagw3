@@ -1,14 +1,14 @@
 /*
  Theme Name:   wagw_2017
  Theme URI:    https://github.com/sterndata/wagw3
- Description:  What A Great Website version 3
+ Description:  What A Great Website version 4
  Author:       Steven Stern
  Author URI:   https://whatagreatwebsite.net
  Template:     twentyseventeen
- Version:      1.0.1
+ Version:      4.0 
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Text Domain:  twentyseventeen
+ Text Domain:  wagw
 */
 .single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary {
   margin-left: auto;

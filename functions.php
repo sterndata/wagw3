@@ -144,3 +144,59 @@ function jptweak_remove_share() {
 
 add_action( 'loop_start', 'jptweak_remove_share' );
 
+// Register Custom Post Type
+function webdesign_portolio() {
+
+	$labels = array(
+		'name'                  => _x( 'Web Designs', 'Post Type General Name', 'wagw' ),
+		'singular_name'         => _x( 'Web Design', 'Post Type Singular Name', 'wagw' ),
+		'menu_name'             => __( 'Web Portfolio Items', 'wagw' ),
+		'name_admin_bar'        => __( 'Post Type', 'wagw' ),
+		'archives'              => __( 'Item Archives', 'wagw' ),
+		'attributes'            => __( 'Item Attributes', 'wagw' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'wagw' ),
+		'all_items'             => __( 'All Items', 'wagw' ),
+		'add_new_item'          => __( 'Add New Item', 'wagw' ),
+		'add_new'               => __( 'Add New', 'wagw' ),
+		'new_item'              => __( 'New Item', 'wagw' ),
+		'edit_item'             => __( 'Edit Item', 'wagw' ),
+		'update_item'           => __( 'Update Item', 'wagw' ),
+		'view_item'             => __( 'View Item', 'wagw' ),
+		'view_items'            => __( 'View Items', 'wagw' ),
+		'search_items'          => __( 'Search Item', 'wagw' ),
+		'not_found'             => __( 'Not found', 'wagw' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'wagw' ),
+		'featured_image'        => __( 'Featured Image', 'wagw' ),
+		'set_featured_image'    => __( 'Set featured image', 'wagw' ),
+		'remove_featured_image' => __( 'Remove featured image', 'wagw' ),
+		'use_featured_image'    => __( 'Use as featured image', 'wagw' ),
+		'insert_into_item'      => __( 'Insert into item', 'wagw' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'wagw' ),
+		'items_list'            => __( 'Items list', 'wagw' ),
+		'items_list_navigation' => __( 'Items list navigation', 'wagw' ),
+		'filter_items_list'     => __( 'Filter items list', 'wagw' ),
+	);
+	$args = array(
+		'label'                 => __( 'Web Design', 'wagw' ),
+		'description'           => __( 'Web Design Portfolio entries', 'wagw' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'revisions' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-desktop',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'web_design', $args );
+
+}
+add_action( 'init', 'webdesign_portolio', 0 );
