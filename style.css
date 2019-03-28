@@ -663,3 +663,7 @@ h2.widget-title {
 .site-branding {
    transition: margin 0.1s;
 }
+
+.full_width #primary {
+   width: 100% !important;
+}

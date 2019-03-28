@@ -195,8 +195,34 @@ function webdesign_portolio() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
+		'rewrite'		=> array( 'with_front' => false ),
 	);
 	register_post_type( 'web_design', $args );
 
 }
 add_action( 'init', 'webdesign_portolio', 0 );
+
+/*
+ * remove has-sidebar class from web portfolio CPTs
+ */
+
+add_filter( 'body_class', 'wagw_remove_has_sidebar', 11 );
+function wagw_remove_has_sidebar( $classes ) {
+   $pt = get_post_type();
+   if ( 'web_design' == $pt ) {
+     $array_without = array_diff($classes, array('has_sidebar'));
+     $array_without[] = 'full_width';
+     return $array_without;
+    } else {
+     return $classes;
+    }
+}
+
+add_filter( 'the_content', 'wagw_return_to_portfolio' );
+function wagw_return_to_portfolio( $content ) {
+   $pt = get_post_type();
+   if ( 'web_design' == $pt ) {
+      $content .= '<p class="return_to_portfolio"><a href="/web_design/">Return to Portfolio</a></p>';
+   }
+   return $content;
+}
