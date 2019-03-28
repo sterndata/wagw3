@@ -667,3 +667,20 @@ h2.widget-title {
 .full_width #primary {
    width: 100% !important;
 }
+
+.port_wrapper {
+    display: grid;
+    grid-gap: 5px;
+    position:relative;
+    grid-template-columns: 20px minmax(200px, 1fr)  20px;
+    background-color: #fff;
+    color: #444;
+}
+.port_wrapper span.dashicons {
+    font-size: 50px;
+}
+.navarrow {
+    color: #888;
+    position:relative;
+    top: 50%;
+}
