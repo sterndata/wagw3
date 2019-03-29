@@ -10,6 +10,9 @@
  * @version 1.0
  */
 
+/** GIANT HACK:  The plugin that sets a custom order reverses the next/previous links,
+	so I'm re-reversing them here.
+**/
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -20,23 +23,27 @@
 	?>
 
 	<?php
-	$img = get_field( 'portfolio_image' );
+	$img     = get_field( 'portfolio_image' );
 	$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $img['id'] ) . '" ';
 	?>
 	<div class="port_wrapper">
 		<div class="navarrow navarrow-left">
-		<?php if( $link = get_previous_post_link() ) {
-			previous_post_link( '%link', '<span class="dashicons dashicons-arrow-left-alt2"></span>' );
-			}
-			?></div>
+		<?php
+		if ( $link = get_next_post_link() ) {
+			next_post_link( '%link', '<' );
+		}
+		?>
+			</div>
 		<div class="portfolio_image">
 		<?php echo '<img src="' . $img['url'] . '" ' . $src_set . '/>'; ?>
-        	</div>
+			</div>
 		<div class="navarrow navarrow-right">
-		<?php if( $link = get_next_post_link() ) {
-                        next_post_link( '%link', '<span class="dashicons dashicons-arrow-right-alt2"></span>' );
-                        }
-                        ?></div>
+		<?php
+		if ( $link = get_previous_post_link() ) {
+						previous_post_link( '%link', '>' );
+		}
+		?>
+						</div>
 
 		</div>
 	</div>
@@ -51,7 +58,7 @@
 		?>
 
 	</header><!-- .entry-header -->
- 
+
 
 	<div class="entry-content">
 		<?php
@@ -63,11 +70,11 @@
 				)
 			);
 
-		?>
+			?>
 	</div><!-- .entry-content -->
 
 	<?php if ( is_single() ) : ?>
-		<?php  twentyseventeen_entry_footer(); ?>
+		<?php twentyseventeen_entry_footer(); ?>
 	<?php endif; ?>
 
 </article><!-- #post-## -->

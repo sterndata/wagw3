@@ -676,7 +676,7 @@ h2.widget-title {
     background-color: #fff;
     color: #444;
 }
-.navarrow .dashicons {
+.navarrow  {
    font-size: 40px;
 }
 .navarrow {
@@ -685,5 +685,11 @@ h2.widget-title {
 }
 .navarrow a:hover {
     color: #aaa;
+}
+.navarrow-left {
+   text-align: left;
+}
+.navarrow-right {
+   text-align: right;
 }
 	
