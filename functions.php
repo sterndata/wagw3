@@ -222,7 +222,7 @@ add_filter( 'the_content', 'wagw_return_to_portfolio' );
 function wagw_return_to_portfolio( $content ) {
 	$pt = get_post_type();
 	if ( 'web_design' == $pt && is_single() ) {
-		$content .= '<p class="return_to_portfolio"><a href="/web_design/">Return to Portfolio</a></p>';
+		$content .= '<p class="return_to_portfolio"><a href="/web_design/">Return to Portfolio</a></p><p class="visit_website"><a href="' . get_field('target') . '">Visit the Website</a>';
 	}
 	return $content;
 }

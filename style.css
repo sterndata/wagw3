@@ -690,4 +690,10 @@ h2.widget-title {
 .navarrow a:hover {
     color: #aaa;
 }
+p.visit_website {
+    float:right;
+}
+p.return_to_portfolio {
+    float:left;
+}
 	
