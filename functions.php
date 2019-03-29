@@ -231,6 +231,7 @@ add_filter( 'pre_get_posts', 'wagw_archive_all' );
 function wagw_archive_all( $query ) {
 if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'web_design' ) ) {
     $query->set( 'posts_per_page', '-1' );
-    // $query->set( 'orderby', 'menu_order' );
+    $query->set( 'orderby', 'menu_order' );
+    $query->set( 'order', 'ASC');
   }
 }
