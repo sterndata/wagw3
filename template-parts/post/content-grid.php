@@ -18,18 +18,12 @@
 <div id="grid" class="grid">
 
 <?php
-	$image = get_ield( 'grid_image' );
+	$image = get_field( 'grid_image' );
 	$slide_caption = get_field( 'caption' );
 	$slide_tag = get_ield( '_tag' );
-	$slide_target = get_sub_field( 'target' );
+	$slide_target = get_field( 'target' );
 	if ( $slide_target ) {
-		$href = '<a href="' . $slide_target . '"';
-		if ( get_sub_field( 'new_window' ) ) {
-			if ( ! wp_is_mobile() ) {
-				$href .= ' target=_blank ';
-			}
-		}
-		$href .= ' >';
+		$href = '<a href="' . $slide_target . '" >';
 	}
 	if ( $use_srcset ) {
 		$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
