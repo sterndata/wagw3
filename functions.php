@@ -221,7 +221,7 @@ function wagw_remove_has_sidebar( $classes ) {
 add_filter( 'the_content', 'wagw_return_to_portfolio' );
 function wagw_return_to_portfolio( $content ) {
    $pt = get_post_type();
-   if ( 'web_design' == $pt ) {
+   if ( 'web_design' == $pt && is_single() ) {
       $content .= '<p class="return_to_portfolio"><a href="/web_design/">Return to Portfolio</a></p>';
    }
    return $content;
