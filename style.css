@@ -676,11 +676,14 @@ h2.widget-title {
     background-color: #fff;
     color: #444;
 }
-.port_wrapper span.dashicons {
-    font-size: 50px;
+.navarrow .dashicons {
+   font-size: 40px;
 }
 .navarrow {
-    color: #888;
     position:relative;
     top: 50%;
 }
+.navarrow a:hover {
+    color: #aaa;
+}
+	
