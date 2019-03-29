@@ -681,15 +681,13 @@ h2.widget-title {
 }
 .navarrow {
     position:relative;
-    top: 50%;
+}
+.navarrow a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .navarrow a:hover {
     color: #aaa;
-}
-.navarrow-left {
-   text-align: left;
-}
-.navarrow-right {
-   text-align: right;
 }
 	
