@@ -118,7 +118,7 @@ function wpsites_add_logo_nav_menu( $menu, stdClass $args ) {
 		return $menu;
 	}
 
-	$menu      = '<span class="nav-image">' . get_custom_logo() . '</span>' .  '<span class="tagline">' . get_bloginfo( 'description' ) . '</span>' . $menu;
+	$menu = '<span class="nav-image">' . get_custom_logo() . '</span>' . '<span class="tagline">' . get_bloginfo( 'description' ) . '</span>' . $menu;
 
 	return $menu;
 }
@@ -176,26 +176,26 @@ function webdesign_portolio() {
 		'items_list_navigation' => __( 'Web Designs list navigation', 'wagw' ),
 		'filter_items_list'     => __( 'Filter Web Designs list', 'wagw' ),
 	);
-	$args = array(
-		'label'                 => __( 'Web Design', 'wagw' ),
-		'description'           => __( 'Web Design Portfolio entries', 'wagw' ),
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'revisions' ),
-		'hierarchical'          => false,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-desktop',
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => true,
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
-		'show_in_rest'          => true,
-		'rewrite'		=> array( 'with_front' => false ),
+	$args   = array(
+		'label'               => __( 'Web Design', 'wagw' ),
+		'description'         => __( 'Web Design Portfolio entries', 'wagw' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'revisions' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-desktop',
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => true,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'page',
+		'show_in_rest'        => true,
+		'rewrite'             => array( 'with_front' => false ),
 	);
 	register_post_type( 'web_design', $args );
 
@@ -208,21 +208,21 @@ add_action( 'init', 'webdesign_portolio', 0 );
 
 add_filter( 'body_class', 'wagw_remove_has_sidebar', 11 );
 function wagw_remove_has_sidebar( $classes ) {
-   $pt = get_post_type();
-   if ( 'web_design' == $pt ) {
-     $array_without = array_diff($classes, array('has_sidebar'));
-     $array_without[] = 'full_width';
-     return $array_without;
-    } else {
-     return $classes;
-    }
+	$pt = get_post_type();
+	if ( 'web_design' == $pt ) {
+		$array_without   = array_diff( $classes, array( 'has_sidebar' ) );
+		$array_without[] = 'full_width';
+		return $array_without;
+	} else {
+		return $classes;
+	}
 }
 
 add_filter( 'the_content', 'wagw_return_to_portfolio' );
 function wagw_return_to_portfolio( $content ) {
-   $pt = get_post_type();
-   if ( 'web_design' == $pt && is_single() ) {
-      $content .= '<p class="return_to_portfolio"><a href="/web_design/">Return to Portfolio</a></p>';
-   }
-   return $content;
+	$pt = get_post_type();
+	if ( 'web_design' == $pt && is_single() ) {
+		$content .= '<p class="return_to_portfolio"><a href="/web_design/">Return to Portfolio</a></p>';
+	}
+	return $content;
 }
