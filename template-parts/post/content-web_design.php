@@ -24,11 +24,21 @@
 	$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $img['id'] ) . '" ';
 	?>
 	<div class="port_wrapper">
-		<div class="navarrow navarrow-left"><span class="dashicons dashicons-arrow-left-alt2"></span></div>
+		<div class="navarrow navarrow-left">
+		<?php if( $link = get_previous_post_link() ) {
+			previous_post_link( '%link', '<span class="dashicons dashicons-arrow-left-alt2"></span>' );
+			}
+			?></div>
 		<div class="portfolio_image">
 		<?php echo '<img src="' . $img['url'] . '" ' . $src_set . '/>'; ?>
         	</div>
-		<div class="navarrow navarrow-right"><span class="dashicons dashicons-arrow-right-alt2"></span></div>
+		<div class="navarrow navarrow-right">
+		<?php if( $link = get_next_post_link() ) {
+                        next_post_link( '%link', '<span class="dashicons dashicons-arrow-right-alt2"></span>' );
+                        }
+                        ?></div>
+
+		</div>
 	</div>
 
 	<header class="entry-header">
@@ -53,22 +63,11 @@
 				)
 			);
 
-			wp_link_pages(
-				array(
-					'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-					'after'       => '</div>',
-					'link_before' => '<span class="page-number">',
-					'link_after'  => '</span>',
-				)
-			);
 		?>
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) { ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_sds' ), __( '1 Comment', '_sds' ), __( '% Comments', '_sds' ) ); ?></span>
-<?php } ?>
 	</div><!-- .entry-content -->
 
 	<?php if ( is_single() ) : ?>
-		<?php twentyseventeen_entry_footer(); ?>
+		<?php  twentyseventeen_entry_footer(); ?>
 	<?php endif; ?>
 
 </article><!-- #post-## -->
