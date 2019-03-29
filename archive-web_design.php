@@ -14,24 +14,19 @@ get_header(); ?>
 
 <div class="wrap">
 
-	<?php if ( have_posts() ) : ?>
-		<header class="page-header">
+<header class="page-header">
 			<h1 class="page-title">Website Portfolio</h1>
 		</header><!-- .page-header -->
-	<?php endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) :
-			?>
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
+		if ( have_posts() ) {
+			while ( have_posts() ) {
 				the_post();
+				?>
 				<div id="grid" class="grid">
-
 				<?php
 					$image = get_field( 'grid_image' );
 					$slide_caption = get_field( 'caption' );
@@ -53,12 +48,11 @@ get_header(); ?>
 				<?php if ( $slide_target ) { echo '</a>'; } ?>
 
 						</div><!-- box -->
-
 				</div><!-- grid -->
+				<?php
+			} // while have_posts
 
-			endwhile;
-
-		endif;
+		} // if have_posts
 		?>
 
 		</main><!-- #main -->
