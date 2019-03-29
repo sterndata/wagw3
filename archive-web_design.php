@@ -32,7 +32,7 @@ get_header(); ?>
 					$image = get_field( 'grid_image' );
 					$slide_caption = get_field( 'caption' );
 					$slide_tag = get_field( 'tag' );
-					$slide_target = get_field( 'target' );
+					$slide_target = get_the_permalink();
 					if ( $slide_target ) {
 						$href = '<a href="' . $slide_target . '" >';
 					}
