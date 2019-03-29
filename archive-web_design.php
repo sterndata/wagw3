@@ -20,13 +20,14 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+			<p>We design websites across a wide range of industries. Nonprofits, small businesses, service providers, healthcare providers, retailers, manufacturers, musicians, galleries, restaurants, speakers, writers, lawyers and artists. Here’s a sampling of some of our work.</p>
+				<div id="grid" class="grid">
 		<?php
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post();
 				?>
-				<div id="grid" class="grid">
+
 				<?php
 					$image = get_field( 'grid_image' );
 					$slide_caption = get_field( 'caption' );
@@ -48,13 +49,13 @@ get_header(); ?>
 				<?php if ( $slide_target ) { echo '</a>'; } ?>
 
 						</div><!-- box -->
-				</div><!-- grid -->
+
 				<?php
 			} // while have_posts
 
 		} // if have_posts
 		?>
-
+				</div><!-- grid -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->
