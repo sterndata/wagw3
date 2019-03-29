@@ -22,14 +22,14 @@
 	<?php
 	$img = get_field( 'portfolio_image' );
 	$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $img['id'] ) . '" ';
-	echo '<div class="port_wrapper">';
-		echo '<div class="navarrow navarrow-left"><span class="dashicons dashicons-arrow-left-alt2"></span></div>';
-		echo '<div class="portfolio_image">';
-		echo '<img src="' . $img['url'] . '" ' . $src_set . '/>';
-        	echo '</div>';
-		echo '<div class="navarrow navarrow-right"><span class="dashicons dashicons-arrow-right-alt2"></span></div>';
-	echo '</div>';
 	?>
+	<div class="port_wrapper">
+		<div class="navarrow navarrow-left"><span class="dashicons dashicons-arrow-left-alt2"></span></div>
+		<div class="portfolio_image">
+		<?php echo '<img src="' . $img['url'] . '" ' . $src_set . '/>'; ?>
+        	</div>
+		<div class="navarrow navarrow-right"><span class="dashicons dashicons-arrow-right-alt2"></span></div>
+	</div>
 
 	<header class="entry-header">
 		<?php
