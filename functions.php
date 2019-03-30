@@ -222,16 +222,16 @@ add_filter( 'the_content', 'wagw_return_to_portfolio' );
 function wagw_return_to_portfolio( $content ) {
 	$pt = get_post_type();
 	if ( 'web_design' == $pt && is_single() ) {
-		$content .= '<p class="return_to_portfolio"><a href="/web_design/">Return to Portfolio</a></p><p class="visit_website"><a href="' . get_field('target') . '" target=_blank >Visit the Website</a>';
+		$content .= '<p class="return_to_portfolio"><a href="/web_design/">Return to Portfolio</a></p><p class="visit_website"><a href="' . get_field( 'target' ) . '" target=_blank >Visit the Website</a>';
 	}
 	return $content;
 }
 
 add_filter( 'pre_get_posts', 'wagw_archive_all' );
 function wagw_archive_all( $query ) {
-if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'web_design' ) ) {
-    $query->set( 'posts_per_page', '-1' );
-    $query->set( 'orderby', 'menu_order' );
-    $query->set( 'order', 'ASC');
-  }
+	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'web_design' ) ) {
+		$query->set( 'posts_per_page', '-1' );
+		$query->set( 'orderby', 'menu_order' );
+		$query->set( 'order', 'ASC' );
+	}
 }

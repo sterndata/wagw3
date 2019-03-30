@@ -68,7 +68,7 @@ if ( have_rows( 'case' ) ) {
 		</div><!--text-row-->
 
 	</div><!-- case-study -->
-	<?php
+		<?php
 	} // while have_rows
 } // if have_rows
 
@@ -81,7 +81,7 @@ if ( have_rows( 'case' ) ) {
 					'after'  => '</div>',
 				)
 			);
-		?>
+			?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', 'wagw' ), '<span class="edit-link">', '</span>' ); ?>

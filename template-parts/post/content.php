@@ -66,7 +66,7 @@
 					'link_after'  => '</span>',
 				)
 			);
-		?>
+			?>
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) { ?>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', '_sds' ), __( '1 Comment', '_sds' ), __( '% Comments', '_sds' ) ); ?></span>
 <?php } ?>
