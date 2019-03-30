@@ -696,4 +696,7 @@ p.visit_website {
 p.return_to_portfolio {
     float:left;
 }
-	
+
+span.IN-widget {
+    vertical-align: top !important;
+}	
