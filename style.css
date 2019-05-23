@@ -284,6 +284,7 @@ div.grid {
     text-align: center;
     position: relative;
     transition: visibility .25s linear;
+    font-size: 90%;
   }
 
   .box .slide_caption {
