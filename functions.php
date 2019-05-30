@@ -208,18 +208,17 @@ add_action( 'init', 'webdesign_portolio', 0 );
 
 add_filter( 'body_class', 'wagw_remove_has_sidebar', 11 );
 function wagw_remove_has_sidebar( $classes ) {
-	$templates = array( 
-		'post-type-archive-web_design', 
-                'web-design-template-default',
-		);
-	$pt = get_post_type();
+	$templates   = array(
+		'post-type-archive-web_design',
+		'web-design-template-default',
+	);
+	$pt          = get_post_type();
 	$has_a_class = false;
-	if ( in_array( $templates, $classes ) )
-		{
-		$has_a_class=true;
-		}
+	if ( in_array( $templates, $classes ) ) {
+		$has_a_class = true;
+	}
 
-	if ( 'web_design' == $pt || $has_a_class  ) {
+	if ( 'web_design' == $pt || $has_a_class ) {
 		$array_without   = array_diff( $classes, array( 'has-sidebar' ) );
 		$array_without[] = 'full_width';
 		return $array_without;
