@@ -278,6 +278,7 @@ span.services_content, .kudos_content {
   border-color: #ccc;
   border-width: 1px;
   padding: 1em;
+  position: relative;
 }
 
 span.kudos_content:before {
@@ -696,6 +697,8 @@ blockquote:before {
 
 .inner-post-thumbnail {
   margin-top: -11px;
+  margin-left: -1em;
+  margin-right: -2em;
 }
 
 .widget ul li a {
