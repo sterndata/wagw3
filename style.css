@@ -98,8 +98,8 @@ a, a:visited {
 }
 
 .page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title, .entry-content h1 {
-  font-size: 28px;
-  color: #75439a;
+  font-size: 36px;
+  color: /* #75439a; */ #777;
   letter-spacing: initial;
   text-transform: lowercase;
 }
