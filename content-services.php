@@ -26,7 +26,7 @@
 			$image         = get_sub_field( 'slide_image' );
 			$slide_caption = get_sub_field( 'slide_caption' );
 			$slide_content = get_sub_field( 'slide_content' );
-			$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
+			$src_set       = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
 			?>
 <div class="box services">
 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> />
