@@ -252,7 +252,7 @@ div.grid {
   font-weight: bold;
 }
 
-span.services_content {
+span.services_content, .kudos_content {
   color: #444;
   font-size: initial;
   font-weight: normal;
@@ -260,16 +260,34 @@ span.services_content {
   display: block;
 }
 
+.kudos_name, .kudos_title, .kudos_website {
+  color: #444;
+  display: block;
+  font-size: initial;
+  font-weight: normal;
+  font-style: italic;
+}
+
 .box.services img {
   margin: 0 auto;
   display: block;
 }
 
-.box.services {
+.box.services, .box.kudos {
   border-style: solid;
   border-color: #ccc;
   border-width: 1px;
   padding: 1em;
+}
+
+span.kudos_content:before {
+  content: "\201C";
+  color: #ddd;
+  font-size: 8em;
+  position: absolute;
+  left: -7px;
+  top: -45px;
+  text-align: center;
 }
 
 @media screen and (min-width: 48em) {
