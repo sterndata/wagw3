@@ -5,7 +5,7 @@
  Author:       Steven Stern
  Author URI:   https://whatagreatwebsite.net
  Template:     twentyseventeen
- Version:      4.0 
+ Version:      4.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  wagw
@@ -225,13 +225,14 @@ nav#site-navigation, .main-navigation ul ul a {
 /* classes for grip-page.php template */
 div.grid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
   margin-bottom: 1.5em;
   overflow: hidden;
 }
+
 
 .slide_caption {
   display: block;
@@ -245,10 +246,38 @@ div.grid {
   font-size: 85%;
 }
 
+.services_caption {
+  text-align:center;
+  color: #444;
+  display: block;
+  margin-top: .5em;
+  font-weight:bold;
+}
+
+span.services_content {
+    color: #444;
+    font-size: initial;
+    font-weight: normal;
+    padding: .5em;
+    display:block;
+}
+
+.box.services img {
+  margin: 0 auto;
+  display:block;
+}
+
+.box.services {
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 1px;
+    padding: 1em;
+}
+
 @media screen and (min-width: 48em) {
   div.grid {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
     background-color: #fff;
     color: #444;
@@ -310,6 +339,10 @@ div.grid {
   .box:hover img {
     transform: scale(1.20);
     transition-duration: .25s;
+  }
+
+  .box.services:hover img{
+    transform:none;
   }
 }
 
@@ -701,4 +734,4 @@ p.return_to_portfolio {
 
 span.IN-widget {
     vertical-align: top !important;
-}	
+}
