@@ -224,7 +224,7 @@ nav#site-navigation, .main-navigation ul ul a {
 /* classes for grip-page.php template */
 div.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
