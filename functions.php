@@ -244,3 +244,15 @@ function wagw_archive_all( $query ) {
 		$query->set( 'order', 'ASC' );
 	}
 }
+
+/*
+ * remove "Category: " from archive page title
+ */
+
+function prefix_category_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'prefix_category_title' );
