@@ -3,6 +3,25 @@
     "title": "Services (Grid) Page",
     "fields": [
         {
+            "key": "field_5d1a31b843f9b",
+            "label": "Page Bottom",
+            "name": "page_bottom",
+            "type": "wysiwyg",
+            "instructions": "This text goes below the grid",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5d1619cf3d82b",
             "label": "Slides",
             "name": "slides",
@@ -105,5 +124,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561736885
+    "modified": 1561998056
 }

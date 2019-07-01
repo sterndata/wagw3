@@ -44,6 +44,12 @@
 	?>
 <?php } ?>
 	<div class="entry-content">
+	<?php
+	$field = get_field( 'page_bottom' );
+	if ( $field ) {
+		echo '<div class="services-page-bottom">' . $field . '</div>';
+		}
+	?>
 		<?php
 			wp_link_pages(
 				array(
