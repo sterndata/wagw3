@@ -246,7 +246,6 @@ div.grid {
 
 .services_caption {
   text-align: center;
-  color: #444;
   display: block;
   margin-top: .5em;
   font-weight: bold;
@@ -294,7 +293,7 @@ span.kudos_content:before {
     color: #b19cd9;
 }
 
-.box.kudos:hover {
+.box.kudos:hover, .box.services:hover {
     background: #777;
     color: #fff;
     transition-duration: .25s;
