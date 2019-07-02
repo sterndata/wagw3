@@ -290,6 +290,16 @@ span.kudos_content:before {
   text-align: center;
 }
 
+.box.kudos:hover span.kudos_website a {
+    color: #b19cd9;
+}
+
+.box.kudos:hover {
+    background: #777;
+    color: #fff;
+    transition-duration: .25s;
+}
+
 @media screen and (min-width: 48em) {
   div.grid {
     display: grid;
