@@ -707,6 +707,7 @@ blockquote:before {
   margin-top: -11px;
   margin-left: -1em;
   margin-right: -2em;
+  text-align:center;
 }
 
 .widget ul li a {
