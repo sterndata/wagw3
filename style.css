@@ -428,6 +428,13 @@ button.menu-toggle {
   display: none;
 }
 
+.inner-post-thumbnail {
+  margin-top: -11px;
+  margin-left: -1em;
+  margin-right: -2em;
+  text-align:center;
+}
+
 @media screen and (min-width: 48em) {
   .site-header .navigation-top .menu-scroll-down {
     color: #fff;
@@ -687,6 +694,13 @@ button.menu-toggle {
   .case-study .result {
     padding-left: .5em;
   }
+
+  .inner-post-thumbnail {
+    margin-top: -11px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align:center;
+  }
 }
 
 blockquote {
@@ -701,13 +715,6 @@ blockquote:before {
   display: block;
   padding-bottom: 1em;
   ;
-}
-
-.inner-post-thumbnail {
-  margin-top: -11px;
-  margin-left: -1em;
-  margin-right: -2em;
-  text-align:center;
 }
 
 .widget ul li a {
