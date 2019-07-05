@@ -775,3 +775,17 @@ p.return_to_portfolio {
 span.IN-widget {
   vertical-align: top !important;
 }
+
+.frm_style_formidable-style.with_frm_style legend + h3, .frm_style_formidable-style.with_frm_style h3.frm_form_title {
+  margin-top:0;
+  line-height:1;
+  padding:0;
+}
+
+#custom_html-2 .frm_form_fields .frm_fields_container {
+  margin-top: -1em;
+}
+
+#custom_html-2 .frm_style_formidable-style.with_frm_style .form-field {
+  margin-bottom: 0;
+}
