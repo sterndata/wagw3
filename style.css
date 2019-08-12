@@ -50,7 +50,7 @@ h1.site-title {
 }
 
 ul, ol {
-  margin-left: 2em;
+  margin-left: 1.2em;
 }
 
 li {
@@ -788,4 +788,8 @@ span.IN-widget {
 
 #custom_html-2 .frm_style_formidable-style.with_frm_style .form-field {
   margin-bottom: 0;
+}
+
+button#wp-custom-header-video-button {
+  z-index:9999;
 }
