@@ -208,6 +208,16 @@ add_action( 'init', 'webdesign_portolio', 0 );
 
 add_filter( 'body_class', 'wagw_remove_has_sidebar', 11 );
 function wagw_remove_has_sidebar( $classes ) {
+$postid = get_the_ID();
+/*	if ( ($postid == 2881) or ($postid == 2902) ) {
+		$array_without[] = 'has-sidebar';
+		return $array_without;
+	}*/
+	if ( is_page_template( 'blog-sidebar.php' ) ) {
+		$array_without[] = 'has-sidebar';
+		$array_without[] = 'has-sidebar-blog';
+		return $array_without;
+	}
 	$templates   = array(
 		'post-type-archive-web_design',
 		'web-design-template-default',
@@ -217,7 +227,6 @@ function wagw_remove_has_sidebar( $classes ) {
 	if ( in_array( $templates, $classes ) ) {
 		$has_a_class = true;
 	}
-
 	if ( 'web_design' == $pt || $has_a_class ) {
 		$array_without   = array_diff( $classes, array( 'has-sidebar' ) );
 		$array_without[] = 'full_width';
@@ -256,3 +265,19 @@ function prefix_category_title( $title ) {
     return $title;
 }
 add_filter( 'get_the_archive_title', 'prefix_category_title' );
+
+function sr_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar_Marketing_Morsels', 'sr' ),
+			'id'            => 'Sidebar_Marketing_Morsels-1',
+			'description'   => esc_html__( 'Add widgets here.', 'sr' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'sr_widgets_init' );
+
